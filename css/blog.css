@@ -1,0 +1,203 @@
+/* Blog Styles */
+@keyframes fadeUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+.animate-up { animation: fadeUp 0.8s ease forwards; }
+.delay-1 { animation-delay: 0.2s; }
+.bg-alt { background-color: var(--nav-bg); }
+
+/* 1. Hero */
+.blog-hero {
+    padding: 10rem 0 6rem 0;
+    background: linear-gradient(rgba(18, 18, 18, 0.7), rgba(18, 18, 18, 0.7)), url('https://i.pinimg.com/1200x/d0/97/79/d0977989be2d7c198fd7effef3027ff2.jpg') center/cover no-repeat;
+    background-attachment: fixed;
+    color: #FFF;
+}
+.hero-title { font-size: 4.5rem; margin-bottom: 1rem; text-shadow: 0 4px 20px rgba(0,0,0,0.5); }
+.hero-title span { color: var(--primary-color); }
+.hero-subtitle { font-size: 1.2rem; color: rgba(255, 255, 255, 0.9); }
+
+/* 2. Featured Blog */
+.featured-card {
+    display: flex;
+    background: var(--card-bg);
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: var(--shadow-lg);
+    border: 1px solid var(--border-color);
+    transition: transform 0.4s ease;
+}
+.featured-card:hover { transform: translateY(-5px); }
+.featured-img { flex: 1.5; }
+.featured-img img { width: 100%; height: 100%; object-fit: cover; }
+.featured-content {
+    flex: 1;
+    padding: 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.blog-badge {
+    align-self: flex-start;
+    background: var(--accent-color);
+    color: #FFF;
+    padding: 0.3rem 1rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+.featured-content h2 { font-size: 2rem; margin-bottom: 1rem; }
+.featured-content p { color: var(--text-light); margin-bottom: 1.5rem; line-height: 1.6; }
+.blog-meta {
+    display: flex;
+    gap: 1.5rem;
+    color: var(--text-light);
+    font-size: 0.9rem;
+    margin-bottom: 2rem;
+}
+.blog-meta i { color: var(--primary-color); margin-right: 0.3rem; }
+
+/* 3. Latest Articles */
+.blog-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+.blog-card {
+    background: var(--card-bg);
+    border-radius: 16px;
+    overflow: hidden;
+    border: 1px solid var(--border-color);
+    box-shadow: var(--shadow-sm);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.blog-card:hover {
+    transform: translateY(-10px);
+    box-shadow: var(--shadow-lg);
+}
+.blog-card-img { height: 220px; overflow: hidden; }
+.blog-card-img img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease; }
+.blog-card:hover .blog-card-img img { transform: scale(1.05); }
+.blog-card-content { padding: 1.5rem; }
+.blog-category { color: var(--accent-color); font-weight: 600; font-size: 0.9rem; }
+.blog-card-content h3 { font-size: 1.3rem; margin: 0.5rem 0; }
+.blog-card-content p { color: var(--text-light); margin-bottom: 1.5rem; font-size: 0.95rem; }
+.read-more { color: var(--primary-color); font-weight: 600; display: flex; align-items: center; gap: 0.5rem; }
+.read-more:hover { text-decoration: underline; }
+
+/* 4. Buying Guides */
+.guide-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+}
+.guide-card {
+    text-align: center;
+    background: var(--card-bg);
+    padding: 3rem 2rem;
+    border-radius: 16px;
+    border: 1px solid var(--border-color);
+    transition: transform 0.3s ease;
+}
+.guide-card:hover { transform: translateY(-10px); border-color: var(--primary-color); }
+.guide-icon { font-size: 3rem; color: var(--primary-color); margin-bottom: 1.5rem; }
+.guide-card h3 { margin-bottom: 1rem; font-size: 1.4rem; }
+.guide-card p { color: var(--text-light); margin-bottom: 2rem; }
+
+/* 5. Sports Tips */
+.tips-layout {
+    display: flex;
+    gap: 2rem;
+}
+.tip-main {
+    flex: 1.5;
+    position: relative;
+    border-radius: 16px;
+    overflow: hidden;
+}
+.tip-main img { width: 100%; height: 100%; object-fit: cover; min-height: 400px; }
+.tip-content {
+    position: absolute;
+    bottom: 0; left: 0; width: 100%;
+    padding: 2rem;
+    background: linear-gradient(transparent, rgba(0,0,0,0.9));
+    color: #FFF;
+}
+.tip-content h3 { font-size: 1.8rem; margin: 0.5rem 0; }
+.tip-list {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+.tip-item {
+    display: flex;
+    gap: 1rem;
+    background: var(--card-bg);
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid var(--border-color);
+    transition: transform 0.3s ease;
+}
+.tip-item:hover { transform: translateX(-10px); }
+[dir="rtl"] .tip-item:hover { transform: translateX(10px); }
+.tip-img { width: 120px; flex-shrink: 0; }
+.tip-img img { width: 100%; height: 100%; object-fit: cover; }
+.tip-text { padding: 1rem; display: flex; flex-direction: column; justify-content: center; }
+.tip-text h4 { font-size: 1.1rem; margin-bottom: 0.5rem; }
+.tip-text span { font-size: 0.8rem; color: var(--text-light); }
+
+/* 6. Equipment Reviews */
+.review-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+.review-box {
+    background: var(--card-bg);
+    padding: 2rem;
+    border-radius: 16px;
+    border: 1px solid var(--border-color);
+    box-shadow: var(--shadow-sm);
+    transition: transform 0.3s ease;
+}
+.review-box:hover { transform: translateY(-5px); box-shadow: var(--shadow-lg); }
+.review-box .rating { color: #FFD700; margin-bottom: 1rem; font-weight: 600; }
+.review-box h3 { margin-bottom: 1rem; }
+.review-box p { color: var(--text-light); margin-bottom: 1.5rem; font-style: italic; }
+
+/* 7. Newsletter */
+.newsletter-cta {
+    background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+    color: #FFF;
+    padding: 6rem 0;
+}
+.newsletter-cta h2 { font-size: 2.5rem; margin-bottom: 1rem; }
+.newsletter-cta p { font-size: 1.1rem; margin-bottom: 2rem; opacity: 0.9; }
+.newsletter-form {
+    display: flex;
+    max-width: 500px;
+    margin: 0 auto;
+    gap: 0.5rem;
+}
+.newsletter-form input {
+    flex: 1;
+    padding: 1rem 1.5rem;
+    border-radius: 8px;
+    border: none;
+    font-size: 1rem;
+    font-family: inherit;
+}
+.newsletter-form button {
+    background: #121212;
+}
+
+@media(max-width: 900px) {
+    .featured-card { flex-direction: column; }
+    .tips-layout { flex-direction: column; }
+}
+@media(max-width: 600px) {
+    .newsletter-form { flex-direction: column; }
+}

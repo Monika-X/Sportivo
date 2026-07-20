@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sportivo - Gallery</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/gallery.css?v=2">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <nav class="navbar">
+        <a href="../index.html" class="logo">Sportivo</a>
+        <ul class="nav-links" id="nav-links">
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="home2.html">Home 2</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="gallery.html" style="color: var(--primary-color);">Gallery</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <div class="nav-icons">
+            <button aria-label="Search" title="Search"><i class="fas fa-search"></i></button>
+            <button aria-label="Cart" title="Cart"><i class="fas fa-shopping-cart"></i></button>
+            <button id="theme-toggle" aria-label="Toggle Theme" title="Toggle Theme"><i
+                    class="fas fa-moon"></i></button>
+            <button id="rtl-toggle" aria-label="Toggle RTL" title="Toggle RTL"><i class="fas fa-language"></i></button>
+            <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Menu"><i class="fas fa-bars"></i></button>
+        </div>
+    </nav>
+
+    <main>
+        <!-- 1. Hero -->
+        <section class="gallery-hero">
+            <div class="container text-center">
+                <h1 class="hero-title animate-zoom">Our <span>Gallery</span></h1>
+                <p class="hero-subtitle">Immerse yourself in the world of premium sports.</p>
+            </div>
+        </section>
+
+        <!-- 2. Category Filters -->
+        <section class="gallery-filters sticky-filter">
+            <div class="container">
+                <div class="filter-list">
+                    <a href="#sports-equipment" class="filter-btn active">Sports Equipment</a>
+                    <a href="#outdoor-gear" class="filter-btn">Outdoor Gear</a>
+                    <a href="#cycling" class="filter-btn">Cycling</a>
+                    <a href="#fitness" class="filter-btn">Fitness</a>
+                    <a href="#customer-gallery" class="filter-btn">Customer Gallery</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. Sports Equipment -->
+        <section id="sports-equipment" class="section gallery-section">
+            <div class="container">
+                <h2 class="section-title">Sports Equipment</h2>
+                <div class="gallery-grid">
+                    <div class="gallery-item"><img
+                            src="https://i.pinimg.com/1200x/3c/e6/02/3ce6028fa08c42a7ed942220a7ed8509.jpg"
+                            alt="Basketball"></div>
+                    <div class="gallery-item"><img
+                            src="https://images.unsplash.com/photo-1579952363873-27f3bade9f55?q=80&w=600&auto=format&fit=crop"
+                            alt="Football"></div>
+                    <div class="gallery-item wide"><img
+                            src="https://images.unsplash.com/photo-1541534741688-6078c6bfb5c5?q=80&w=800&auto=format&fit=crop"
+                            alt="Tennis"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. Outdoor Gear -->
+        <section id="outdoor-gear" class="section gallery-section bg-alt">
+            <div class="container">
+                <h2 class="section-title">Outdoor Gear</h2>
+                <div class="gallery-grid">
+                    <div class="gallery-item wide"><img
+                            src="https://i.pinimg.com/736x/45/35/b5/4535b5757cbe8b783701f7063c78b899.jpg"
+                            alt="Tent"></div>
+                    <div class="gallery-item"><img
+                            src="https://i.pinimg.com/1200x/63/aa/a0/63aaa0387451a4bb6fda533a6854d9c4.jpg"
+                            alt="Surfing"></div>
+                    <div class="gallery-item"><img
+                            src="https://i.pinimg.com/736x/97/36/e8/9736e859eaef491951298348f3608ae2.jpg"
+                            alt="Snowboard"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. Cycling -->
+        <section id="cycling" class="section gallery-section">
+            <div class="container">
+                <h2 class="section-title">Cycling</h2>
+                <div class="gallery-grid">
+                    <div class="gallery-item"><img
+                            src="https://i.pinimg.com/736x/42/c7/22/42c7222800b89cd8ffc7caeaa4055ead.jpg"
+                            alt="Bicycle"></div>
+                    <div class="gallery-item wide"><img
+                            src="https://i.pinimg.com/736x/6e/6b/97/6e6b9725912c161c7e64e53dcd492f84.jpg"
+                            alt="Helmet"></div>
+                    <div class="gallery-item"><img
+                            src="https://i.pinimg.com/736x/52/e6/83/52e68368252c5e9c4213b61cb264f382.jpg"
+                            alt="Gear"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 6. Fitness -->
+        <section id="fitness" class="section gallery-section bg-alt">
+            <div class="container">
+                <h2 class="section-title">Fitness</h2>
+                <div class="gallery-grid">
+                    <div class="gallery-item wide"><img
+                            src="https://i.pinimg.com/736x/41/70/8f/41708f2baffdd8210d4fd7a10eaa9a04.jpg"
+                            alt="Gym"></div>
+                    <div class="gallery-item"><img
+                            src="https://images.unsplash.com/photo-1517836357463-d25dfeac3438?q=80&w=600&auto=format&fit=crop"
+                            alt="Weights"></div>
+                    <div class="gallery-item"><img
+                            src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?q=80&w=600&auto=format&fit=crop"
+                            alt="Treadmill"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 7. Customer Gallery -->
+        <section id="customer-gallery" class="section gallery-section">
+            <div class="container">
+                <h2 class="section-title">Customer Gallery</h2>
+                <div class="gallery-masonry">
+                    <div class="masonry-pic"><img
+                            src="https://images.unsplash.com/photo-1517649763962-0c623066013b?q=80&w=600&auto=format&fit=crop"
+                            alt="Local Tournaments"></div>
+                    <div class="masonry-pic"><img
+                            src="https://i.pinimg.com/736x/7d/01/3b/7d013bbbd33de179606baae5d8f829c0.jpg"
+                            alt="Team Kits"></div>
+                    <div class="masonry-pic"><img
+                            src="https://images.unsplash.com/photo-1502014822147-1aedfb0676e0?q=80&w=600&auto=format&fit=crop"
+                            alt="Academy Sessions"></div>
+                    <div class="masonry-pic"><img
+                            src="https://i.pinimg.com/1200x/9a/21/80/9a2180dc75b93abd0a3d8dabeb01e573.jpg"
+                            alt="Corporate Sports"></div>
+                    <div class="masonry-pic"><img
+                            src="https://i.pinimg.com/1200x/34/aa/86/34aa86cfc0c5bc7e6c02854cbef61f50.jpg"
+                            alt="Gear Maintenance"></div>
+                    <div class="masonry-pic"><img
+                            src="https://images.unsplash.com/photo-1580674285054-bed31e145f59?q=80&w=600&auto=format&fit=crop"
+                            alt="Delivery & Setup"></div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="professional-footer">
+        <div class="container footer-grid">
+            <div class="footer-col brand-col">
+                <a href="../index.html" class="footer-logo">Sportivo</a>
+                <p>Empowering athletes with premium gear, innovative technology, and uncompromising quality for every
+                    challenge.</p>
+                <div class="footer-socials">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+            <div class="footer-col links-col">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-col links-col">
+                <h3>Support & Legal</h3>
+                <ul>
+                    <li><a href="faq.html">FAQ</a></li>
+                    <li><a href="../index.html">Sitemap</a></li>
+                    <li><a href="maintenance.html">Maintenance</a></li>
+                    <li><a href="terms-conditions.html">Terms & Conditions</a></li>
+                    <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                </ul>
+            </div>
+            <div class="footer-col contact-col">
+                <h3>Contact Us</h3>
+                <ul class="footer-contact-info">
+                    <li><i class="fas fa-map-marker-alt"></i> <a
+                            href="https://maps.google.com/?q=123+Sportivo+Avenue,+NY+10012" target="_blank"
+                            rel="noopener noreferrer">123 Sportivo Avenue, NY 10012</a></li>
+                    <li><i class="fas fa-envelope"></i> <a href="mailto:support@sportivo.com">support@sportivo.com</a>
+                    </li>
+                    <li><i class="fas fa-phone-alt"></i> <a href="tel:+18001234567">+1 (800) 123-4567</a></li>
+                </ul>
+                <div class="footer-newsletter">
+                    <p style="margin-bottom: 0.5rem; font-size: 0.9rem; color: var(--text-light);">Subscribe to our
+                        newsletter</p>
+                    <form onsubmit="event.preventDefault(); alert('Subscribed successfully!');">
+                        <input type="email" placeholder="Enter your email" required>
+                        <button type="submit" aria-label="Subscribe"><i class="fas fa-paper-plane"></i></button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <p>&copy; 2026 Sportivo. Premium Sports & Outdoor Equipment. All rights reserved.</p>
+                <div class="payment-methods">
+                    <i class="fab fa-cc-visa"></i>
+                    <i class="fab fa-cc-mastercard"></i>
+                    <i class="fab fa-cc-paypal"></i>
+                    <i class="fab fa-cc-apple-pay"></i>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="../js/script.js"></script>
+    <script>
+        document.querySelectorAll('.filter-btn').forEach(btn => {
+            btn.addEventListener('click', function () {
+                document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+                this.classList.add('active');
+            });
+        });
+
+        // Auto-generate hover text overlays from image alt attributes
+        document.querySelectorAll('.gallery-item, .masonry-pic').forEach(item => {
+            const img = item.querySelector('img');
+            if (img && img.alt) {
+                const overlay = document.createElement('div');
+                overlay.className = 'hover-text-overlay';
+                overlay.innerHTML = `<h3>${img.alt}</h3>`;
+                item.appendChild(overlay);
+            }
+        });
+    </script>
+    <button id="backToTopBtn" aria-label="Back to top" title="Go to top"><i class="fas fa-arrow-up"></i></button>
+</body>
+
+</html>

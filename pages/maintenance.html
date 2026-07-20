@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sportivo - Maintenance</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/status.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="status-body">
+    <div class="status-container">
+        <i class="fas fa-tools status-icon"></i>
+        <h1>Under Maintenance</h1>
+        <p>We are currently upgrading our systems to bring you an even better premium experience. We'll be back shortly!</p>
+        <div class="countdown" id="countdown">
+            <div class="time-box"><span id="days">0</span><small>Days</small></div>
+            <div class="time-box"><span id="hours">0</span><small>Hours</small></div>
+            <div class="time-box"><span id="minutes">0</span><small>Minutes</small></div>
+            <div class="time-box"><span id="seconds">0</span><small>Seconds</small></div>
+        </div>
+        <div class="notify-wrapper">
+            <input type="email" placeholder="Enter email to get notified">
+            <button class="btn btn-primary notify-btn" onclick="alert('You will be notified!')">Notify Me</button>
+        </div>
+    </div>
+    <script>
+        let time = 3600 * 24 * 2; // 2 days
+        setInterval(() => {
+            time--;
+            document.getElementById('days').innerText = Math.floor(time / (3600*24));
+            document.getElementById('hours').innerText = Math.floor((time % (3600*24)) / 3600);
+            document.getElementById('minutes').innerText = Math.floor((time % 3600) / 60);
+            document.getElementById('seconds').innerText = time % 60;
+        }, 1000);
+    </script>
+    <button id="backToTopBtn" aria-label="Back to top" title="Go to top"><i class="fas fa-arrow-up"></i></button>
+</body>
+</html>

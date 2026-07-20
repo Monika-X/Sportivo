@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sportivo - Booking & Bulk Orders</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/booking.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <a href="../index.html" class="logo">Sportivo</a>
+        <ul class="nav-links" id="nav-links">
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <div class="nav-icons">
+            <button aria-label="Search" title="Search"><i class="fas fa-search"></i></button>
+            <button aria-label="Cart" title="Cart"><i class="fas fa-shopping-cart"></i></button>
+            <button id="theme-toggle" aria-label="Toggle Theme" title="Toggle Theme"><i class="fas fa-moon"></i></button>
+            <button id="rtl-toggle" aria-label="Toggle RTL" title="Toggle RTL"><i class="fas fa-language"></i></button>
+            <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Menu"><i class="fas fa-bars"></i></button>
+        </div>
+    </nav>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="booking-hero">
+            <div class="booking-hero-overlay"></div>
+            <div class="container text-center">
+                <h1>Bookings & <span>Bulk Orders</span></h1>
+                <p>Reserve equipment, book consultations, or request wholesale quotes for your entire team.</p>
+            </div>
+        </section>
+
+        <!-- Forms Section -->
+        <section class="section booking-forms-section">
+            <div class="container">
+                <div class="forms-grid">
+                    <!-- Booking Form -->
+                    <div class="form-card glass-panel">
+                        <div class="form-header">
+                            <i class="fas fa-calendar-check"></i>
+                            <h2>Service Booking</h2>
+                            <p>Book maintenance, court time, or gear consultation.</p>
+                        </div>
+                        <form onsubmit="event.preventDefault(); alert('Booking Request Submitted Successfully!');">
+                            <div class="form-group">
+                                <label>Full Name</label>
+                                <input type="text" required placeholder="John Doe">
+                            </div>
+                            <div class="form-group">
+                                <label>Email Address</label>
+                                <input type="email" required placeholder="john@example.com">
+                            </div>
+                            <div class="form-group">
+                                <label>Service Type</label>
+                                <select required>
+                                    <option value="" disabled selected>Select a service</option>
+                                    <option value="maintenance">Equipment Maintenance</option>
+                                    <option value="consultation">Gear Consultation</option>
+                                    <option value="court">Court/Turf Booking</option>
+                                    <option value="other">Other</option>
+                                </select>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label>Preferred Date</label>
+                                    <input type="date" required>
+                                </div>
+                                <div class="form-group">
+                                    <label>Preferred Time</label>
+                                    <input type="time" required>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label>Additional Notes</label>
+                                <textarea rows="3" placeholder="Any specific requirements?"></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary btn-block">Confirm Booking</button>
+                        </form>
+                    </div>
+
+                    <!-- Bulk Order Form -->
+                    <div class="form-card glass-panel highlight-card">
+                        <div class="form-header">
+                            <i class="fas fa-boxes"></i>
+                            <h2>Bulk Order Enquiry</h2>
+                            <p>Get exclusive corporate and team discounts.</p>
+                        </div>
+                        <form onsubmit="event.preventDefault(); alert('Bulk Order Enquiry Submitted Successfully!');">
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label>Team/Company Name</label>
+                                    <input type="text" required placeholder="E.g. FC Spartans">
+                                </div>
+                                <div class="form-group">
+                                    <label>Contact Person</label>
+                                    <input type="text" required placeholder="Jane Smith">
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label>Email Address</label>
+                                    <input type="email" required placeholder="jane@example.com">
+                                </div>
+                                <div class="form-group">
+                                    <label>Phone Number</label>
+                                    <input type="tel" required placeholder="+1 234 567 890">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label>Product Category</label>
+                                <select required>
+                                    <option value="" disabled selected>Select equipment category</option>
+                                    <option value="kits">Team Kits & Jerseys</option>
+                                    <option value="balls">Balls & Match Equipment</option>
+                                    <option value="fitness">Gym & Fitness Gear</option>
+                                    <option value="accessories">Training Accessories</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label>Estimated Quantity</label>
+                                <input type="number" min="10" required placeholder="Minimum 10 units">
+                            </div>
+                            <div class="form-group">
+                                <label>Detailed Requirements</label>
+                                <textarea rows="3" required placeholder="Specify sizes, colors, branding requirements..."></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-accent btn-block">Request Quote</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="professional-footer">
+        <div class="container footer-grid">
+            <div class="footer-col brand-col">
+                <a href="../index.html" class="footer-logo">Sportivo</a>
+                <p>Empowering athletes with premium gear, innovative technology, and uncompromising quality for every challenge.</p>
+                <div class="footer-socials">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+            <div class="footer-col links-col">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-col links-col">
+                <h3>Support & Legal</h3>
+                <ul>
+                    <li><a href="faq.html">FAQ</a></li>
+                    <li><a href="../index.html">Sitemap</a></li>
+                    <li><a href="maintenance.html">Maintenance</a></li>
+                    <li><a href="terms-conditions.html">Terms & Conditions</a></li>
+                    <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                </ul>
+            </div>
+            <div class="footer-col contact-col">
+                <h3>Contact Us</h3>
+                <ul class="footer-contact-info">
+                    <li><i class="fas fa-map-marker-alt"></i> <a href="https://maps.google.com/?q=123+Sportivo+Avenue,+NY+10012" target="_blank" rel="noopener noreferrer">123 Sportivo Avenue, NY 10012</a></li>
+                    <li><i class="fas fa-envelope"></i> <a href="mailto:support@sportivo.com">support@sportivo.com</a></li>
+                    <li><i class="fas fa-phone-alt"></i> <a href="tel:+18001234567">+1 (800) 123-4567</a></li>
+                </ul>
+                <div class="footer-newsletter">
+                    <p style="margin-bottom: 0.5rem; font-size: 0.9rem; color: var(--text-light);">Subscribe to our newsletter</p>
+                    <form onsubmit="event.preventDefault(); alert('Subscribed successfully!');">
+                        <input type="email" placeholder="Enter your email" required>
+                        <button type="submit" aria-label="Subscribe"><i class="fas fa-paper-plane"></i></button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <p>&copy; 2026 Sportivo. Premium Sports & Outdoor Equipment. All rights reserved.</p>
+                <div class="payment-methods">
+                    <i class="fab fa-cc-visa"></i>
+                    <i class="fab fa-cc-mastercard"></i>
+                    <i class="fab fa-cc-paypal"></i>
+                    <i class="fab fa-cc-apple-pay"></i>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <button id="backToTopBtn" aria-label="Back to top" title="Go to top"><i class="fas fa-arrow-up"></i></button>
+    <script src="../js/script.js"></script>
+</body>
+</html>
