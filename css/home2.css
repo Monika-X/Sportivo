@@ -43,9 +43,15 @@
     position: absolute;
     bottom: 2rem;
     left: 2rem;
+    right: auto;
     color: #FFF;
     z-index: 2;
     transition: transform 0.3s ease;
+}
+[dir="rtl"] .masonry-content {
+    left: auto;
+    right: 2rem;
+    text-align: right;
 }
 .masonry-item:hover .masonry-content {
     transform: translateY(-10px);
@@ -61,6 +67,10 @@
     display: flex;
     align-items: center;
     gap: 0.5rem;
+}
+[dir="rtl"] .btn-link {
+    flex-direction: row-reverse;
+    justify-content: flex-end;
 }
 
 /* 2. Outdoor Adventure - Overlapping Floating Box */
@@ -430,4 +440,21 @@
     [dir="rtl"] .showcase-features.left, [dir="rtl"] .showcase-features.right { text-align: center; }
     .guide-wrapper { flex-direction: column; }
     .seasonal-offers { flex-direction: column; height: 800px; }
+}
+
+@media (max-width: 425px) {
+    .masonry-item { height: 220px; }
+    .masonry-content h3 { font-size: 1.4rem; }
+    .masonry-content { bottom: 1rem; left: 1rem; right: auto; }
+    [dir="rtl"] .masonry-content { left: auto; right: 1rem; }
+    .seasonal-offers { height: auto; }
+    .offer-content h2 { font-size: 2rem; }
+    .offer-content h3 { font-size: 1.2rem; }
+    .outdoor-content { padding: 1.5rem; margin: -60px auto 0 auto; }
+}
+
+@media (max-width: 360px) {
+    .masonry-item { height: 180px; }
+    .masonry-content h3 { font-size: 1.2rem; }
+    .offer-content h2 { font-size: 1.8rem; }
 }

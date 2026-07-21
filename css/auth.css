@@ -11,28 +11,14 @@
     display: flex;
     background: var(--card-bg);
     width: 100%;
-    max-width: 1000px;
+    max-width: 500px;
     border-radius: 20px;
     overflow: hidden;
     box-shadow: var(--shadow-lg);
     border: 1px solid var(--border-color);
 }
 .auth-container.reverse { flex-direction: row-reverse; }
-.auth-image {
-    flex: 1;
-    background-size: cover;
-    background-position: center;
-    position: relative;
-    display: flex;
-    align-items: flex-end;
-}
-.auth-overlay {
-    background: linear-gradient(transparent, rgba(0,0,0,0.8));
-    width: 100%;
-    padding: 3rem;
-    color: #FFF;
-}
-.auth-overlay h2 { font-size: 2.5rem; margin-bottom: 0.5rem; }
+
 .auth-form-wrapper {
     flex: 1;
     padding: 4rem;
@@ -84,10 +70,24 @@
 #strength-text { display: block; margin-top: 4px; font-weight: 500; font-size: 0.8rem; }
 
 @media(max-width: 768px) {
+    .auth-body { padding: 1rem; }
     .auth-container { flex-direction: column; }
     .auth-container.reverse { flex-direction: column; }
-    .auth-image { height: 250px; }
     .auth-form-wrapper { padding: 2rem; }
+}
+
+@media(max-width: 425px) {
+    .auth-body { padding: 0.5rem; }
+    .auth-form-wrapper { padding: 1.5rem 1rem; }
+    .auth-title { font-size: 1.6rem; }
+}
+
+@media(max-width: 360px) {
+    .auth-body { padding: 0.25rem; }
+    .auth-form-wrapper { padding: 1rem 0.75rem; }
+    .auth-title { font-size: 1.4rem; }
+    .auth-controls { top: 0.5rem; right: 0.5rem; gap: 0.4rem; }
+    [dir="rtl"] .auth-controls { left: 0.5rem; }
 }
 
 /* Floating Auth Toggles */
@@ -124,7 +124,8 @@ input[type="password"] {
     background: var(--card-bg);
     border: 1px solid var(--border-color);
     color: var(--text-color);
-    padding: 0.6rem 0.9rem;
+    width: 36px;
+    height: 36px;
     border-radius: 10px;
     cursor: pointer;
     box-shadow: var(--shadow-sm);

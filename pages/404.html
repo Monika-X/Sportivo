@@ -9,20 +9,10 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body class="status-body">
-    <nav class="navbar" style="position: absolute; top: 0; left: 0; width: 100%;">
-        <a href="../index.html" class="logo">Sportivo</a>
-        <div class="nav-icons">
-            <div class="user-dropdown">
-                <button id="user-toggle" aria-label="User Profile" title="Account"><i class="fas fa-user"></i></button>
-                <div class="user-dropdown-menu" id="user-dropdown-menu">
-                    <a href="login.html"><i class="fas fa-sign-in-alt"></i> Login</a>
-                    <a href="signup.html"><i class="fas fa-user-plus"></i> Sign Up</a>
-                </div>
-            </div>
-            <button id="theme-toggle" aria-label="Toggle Theme" title="Toggle Theme"><i class="fas fa-moon"></i></button>
-            <button id="rtl-toggle" aria-label="Toggle RTL" title="Toggle RTL" style="font-weight: 700; font-size: 0.9rem;">RTL</button>
-        </div>
-    </nav>
+    <div class="status-controls">
+        <button id="theme-toggle" aria-label="Toggle Theme" title="Toggle Theme"><i class="fas fa-moon"></i></button>
+        <button id="rtl-toggle" aria-label="Toggle RTL" title="Toggle RTL" style="font-weight: 700; font-size: 0.9rem;">RTL</button>
+    </div>
     <div class="status-container text-center">
         <img src="https://illustrations.popsy.co/amber/falling.svg" alt="404 Illustration" class="status-img">
         <h1 class="error-code">404</h1>

@@ -240,3 +240,22 @@
     .gallery-masonry { grid-template-columns: 1fr; }
     .masonry-pic:nth-child(n) { grid-column: span 1; grid-row: span 1; }
 }
+
+@media(max-width: 425px) {
+    .hero-title { font-size: 2.5rem; }
+    .hero-subtitle { font-size: 1rem; }
+    .gallery-hero { padding: 7rem 0 4rem 0; }
+    .gallery-item, .gallery-item.wide, .gallery-item:nth-child(1), .gallery-item:nth-child(2), .gallery-item:nth-child(3) {
+        height: 200px;
+    }
+    .filter-btn { padding: 0.5rem 1rem; font-size: 0.85rem; }
+    .gallery-masonry { grid-auto-rows: 180px; }
+}
+
+@media(max-width: 360px) {
+    .hero-title { font-size: 2rem; }
+    .gallery-item, .gallery-item.wide, .gallery-item:nth-child(1), .gallery-item:nth-child(2), .gallery-item:nth-child(3) {
+        height: 170px;
+    }
+    .gallery-masonry { grid-auto-rows: 150px; }
+}

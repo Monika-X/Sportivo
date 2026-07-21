@@ -31,7 +31,22 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    gap: 1rem;
     transition: color 0.3s ease;
+    /* Always keep question text LTR so ? never moves to wrong position */
+    direction: ltr;
+    unicode-bidi: isolate;
+}
+/* In RTL: put + icon on the LEFT by reversing flex order,
+   and align multi-line wrapped text to the right */
+[dir="rtl"] .accordion-header {
+    flex-direction: row-reverse;
+    text-align: right;
+    direction: rtl;
+}
+.accordion-header i {
+    /* Never let the icon shrink or overlap into the text */
+    flex-shrink: 0;
 }
 .accordion-header:hover { color: var(--primary-color); }
 .accordion-content {
@@ -43,6 +58,10 @@
     padding: 0 1.5rem 1.5rem 1.5rem;
     color: var(--text-light);
     line-height: 1.6;
+}
+[dir="rtl"] .accordion-content p {
+    text-align: right;
+    padding: 0 1.5rem 1.5rem 1.5rem;
 }
 
 /* Document */
@@ -57,10 +76,29 @@
     box-shadow: var(--shadow-lg);
     text-align: left;
 }
+[dir="rtl"] .document {
+    text-align: right;
+    direction: rtl;
+}
 .document h2 { font-size: 1.5rem; margin-top: 2.5rem; margin-bottom: 1rem; color: var(--primary-color); }
 .document h2:first-child { margin-top: 0; }
 .document p { color: var(--text-color); line-height: 1.8; margin-bottom: 1rem; opacity: 0.9; }
 
 @media(max-width: 768px) {
     .document { padding: 2rem; }
+    .accordion-header { font-size: 1rem; padding: 1.2rem; }
+    .info-header h1 { font-size: 2.5rem; }
+}
+
+@media(max-width: 425px) {
+    .info-page { padding: 6rem 0 3rem 0; }
+    .info-header h1 { font-size: 2rem; }
+    .info-header p { font-size: 1rem; }
+    .accordion-header { font-size: 0.95rem; padding: 1rem; }
+    .document { padding: 1.5rem; }
+}
+
+@media(max-width: 360px) {
+    .info-header h1 { font-size: 1.8rem; }
+    .accordion-header { font-size: 0.9rem; }
 }

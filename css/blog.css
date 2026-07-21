@@ -181,4 +181,15 @@
 @media(max-width: 600px) {
     .newsletter-form { flex-direction: column; }
 }
+@media(max-width: 425px) {
+    .hero-title { font-size: 2.5rem; }
+    .blog-hero { padding: 7rem 0 4rem 0; }
+    .newsletter-cta { padding: 4rem 0; }
+    .newsletter-cta h2 { font-size: 2rem; }
+    .featured-content { padding: 1.5rem; }
+}
+@media(max-width: 360px) {
+    .hero-title { font-size: 2rem; }
+    .newsletter-cta h2 { font-size: 1.6rem; }
+}
 .hidden-item { display: none !important; }

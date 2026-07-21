@@ -53,12 +53,16 @@ document.addEventListener('DOMContentLoaded', () => {
   const navLinks = document.getElementById('nav-links');
 
   if(mobileMenuBtn && navLinks) {
+    const menuIcon = mobileMenuBtn.querySelector('i');
+
     mobileMenuBtn.addEventListener('click', () => {
       const isActive = navLinks.classList.toggle('active');
       if (isActive) {
         document.body.classList.add('no-scroll');
+        if (menuIcon) { menuIcon.classList.replace('fa-bars', 'fa-times'); }
       } else {
         document.body.classList.remove('no-scroll');
+        if (menuIcon) { menuIcon.classList.replace('fa-times', 'fa-bars'); }
       }
     });
 
@@ -67,6 +71,7 @@ document.addEventListener('DOMContentLoaded', () => {
       link.addEventListener('click', () => {
         navLinks.classList.remove('active');
         document.body.classList.remove('no-scroll');
+        if (menuIcon) { menuIcon.classList.replace('fa-times', 'fa-bars'); }
       });
     });
   }
