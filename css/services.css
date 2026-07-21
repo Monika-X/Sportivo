@@ -52,9 +52,6 @@
 .service-flex.reverse {
     flex-direction: row-reverse;
 }
-[dir="rtl"] .service-flex.reverse {
-    flex-direction: row;
-}
 
 .service-img {
     flex: 1;

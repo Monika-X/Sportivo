@@ -17,17 +17,22 @@
             <li><a href="../index.html">Home</a></li>
             <li><a href="home2.html">Home 2</a></li>
             <li><a href="about.html">About</a></li>
-            <li><a href="services.html" style="color: var(--primary-color);">Services</a></li>
+            <li><a href="services.html">Services</a></li>
             <li><a href="gallery.html">Gallery</a></li>
             <li><a href="blog.html">Blog</a></li>
             <li><a href="contact.html">Contact</a></li>
         </ul>
         <div class="nav-icons">
-            <button aria-label="Search" title="Search"><i class="fas fa-search"></i></button>
-            <button aria-label="Cart" title="Cart"><i class="fas fa-shopping-cart"></i></button>
+            <div class="user-dropdown">
+                <button id="user-toggle" aria-label="User Profile" title="Account"><i class="fas fa-user"></i></button>
+                <div class="user-dropdown-menu" id="user-dropdown-menu">
+                    <a href="login.html"><i class="fas fa-sign-in-alt"></i> Login</a>
+                    <a href="signup.html"><i class="fas fa-user-plus"></i> Sign Up</a>
+                </div>
+            </div>
             <button id="theme-toggle" aria-label="Toggle Theme" title="Toggle Theme"><i
                     class="fas fa-moon"></i></button>
-            <button id="rtl-toggle" aria-label="Toggle RTL" title="Toggle RTL"><i class="fas fa-language"></i></button>
+            <button id="rtl-toggle" aria-label="Toggle RTL" title="Toggle RTL" style="font-weight: 700; font-size: 0.9rem;">RTL</button>
             <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Menu"><i class="fas fa-bars"></i></button>
         </div>
     </nav>
@@ -115,8 +120,8 @@
             <div class="container">
                 <div class="service-flex reverse">
                     <div class="service-img animate-right">
-                        <img src="https://images.unsplash.com/photo-1502014822147-1aedfb0676e0?q=80&w=800&auto=format&fit=crop"
-                            alt="Academy Supply">
+                        <img src="https://i.pinimg.com/736x/bc/b0/ee/bcb0ee409d1ae1748a6a6941044b0998.jpg"
+                            alt="Academy Supply" style="max-height: 350px; width: 100%; object-fit: cover;">
                     </div>
                     <div class="service-info animate-left">
                         <div class="icon-wrap"><i class="fas fa-graduation-cap"></i></div>
@@ -210,10 +215,10 @@
                 <p>Empowering athletes with premium gear, innovative technology, and uncompromising quality for every
                     challenge.</p>
                 <div class="footer-socials">
-                    <a href="#"><i class="fab fa-facebook-f"></i></a>
-                    <a href="#"><i class="fab fa-twitter"></i></a>
-                    <a href="#"><i class="fab fa-instagram"></i></a>
-                    <a href="#"><i class="fab fa-youtube"></i></a>
+                    <a href="https://facebook.com/sportivo" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://twitter.com/sportivo" target="_blank" rel="noopener noreferrer"><i class="fab fa-twitter"></i></a>
+                    <a href="https://instagram.com/sportivo" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a>
+                    <a href="https://youtube.com/sportivo" target="_blank" rel="noopener noreferrer"><i class="fab fa-youtube"></i></a>
                 </div>
             </div>
             <div class="footer-col links-col">
@@ -224,14 +229,13 @@
                     <li><a href="services.html">Services</a></li>
                     <li><a href="gallery.html">Gallery</a></li>
                     <li><a href="blog.html">Blog</a></li>
-                    <li><a href="contact.html">Contact</a></li>
                 </ul>
             </div>
             <div class="footer-col links-col">
                 <h3>Support & Legal</h3>
                 <ul>
                     <li><a href="faq.html">FAQ</a></li>
-                    <li><a href="../index.html">Sitemap</a></li>
+                    <li><a href="contact.html">Contact</a></li>
                     <li><a href="maintenance.html">Maintenance</a></li>
                     <li><a href="terms-conditions.html">Terms & Conditions</a></li>
                     <li><a href="privacy-policy.html">Privacy Policy</a></li>
@@ -250,7 +254,7 @@
                 <div class="footer-newsletter">
                     <p style="margin-bottom: 0.5rem; font-size: 0.9rem; color: var(--text-light);">Subscribe to our
                         newsletter</p>
-                    <form onsubmit="event.preventDefault(); alert('Subscribed successfully!');">
+                    <form onsubmit="event.preventDefault();">
                         <input type="email" placeholder="Enter your email" required>
                         <button type="submit" aria-label="Subscribe"><i class="fas fa-paper-plane"></i></button>
                     </form>

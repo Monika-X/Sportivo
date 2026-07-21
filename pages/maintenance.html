@@ -21,7 +21,7 @@
         </div>
         <div class="notify-wrapper">
             <input type="email" placeholder="Enter email to get notified">
-            <button class="btn btn-primary notify-btn" onclick="alert('You will be notified!')">Notify Me</button>
+            <button class="btn btn-primary notify-btn" onclick="showToast('You will be notified!', 'success'); this.previousElementSibling.value = '';">Notify Me</button>
         </div>
     </div>
     <script>

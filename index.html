@@ -11,7 +11,7 @@
     <nav class="navbar">
         <a href="index.html" class="logo">Sportivo</a>
         <ul class="nav-links" id="nav-links">
-            <li><a href="index.html" style="color: var(--primary-color);">Home</a></li>
+            <li><a href="index.html">Home</a></li>
             <li><a href="pages/home2.html">Home 2</a></li>
             <li><a href="pages/about.html">About</a></li>
             <li><a href="pages/services.html">Services</a></li>
@@ -20,10 +20,15 @@
             <li><a href="pages/contact.html">Contact</a></li>
         </ul>
         <div class="nav-icons">
-            <button aria-label="Search" title="Search"><i class="fas fa-search"></i></button>
-            <button aria-label="Cart" title="Cart"><i class="fas fa-shopping-cart"></i></button>
+            <div class="user-dropdown">
+                <button id="user-toggle" aria-label="User Profile" title="Account"><i class="fas fa-user"></i></button>
+                <div class="user-dropdown-menu" id="user-dropdown-menu">
+                    <a href="pages/login.html"><i class="fas fa-sign-in-alt"></i> Login</a>
+                    <a href="pages/signup.html"><i class="fas fa-user-plus"></i> Sign Up</a>
+                </div>
+            </div>
             <button id="theme-toggle" aria-label="Toggle Theme" title="Toggle Theme"><i class="fas fa-moon"></i></button>
-            <button id="rtl-toggle" aria-label="Toggle RTL" title="Toggle RTL"><i class="fas fa-language"></i></button>
+            <button id="rtl-toggle" aria-label="Toggle RTL" title="Toggle RTL" style="font-weight: 700; font-size: 0.9rem;">RTL</button>
             <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Menu"><i class="fas fa-bars"></i></button>
         </div>
     </nav>
@@ -40,8 +45,8 @@
                 <h1 class="hero-title">Elevate Your <span>Performance</span></h1>
                 <p class="hero-subtitle">Discover premium sports equipment and outdoor gear engineered for champions.</p>
                 <div class="hero-actions">
-                    <a href="#" class="btn btn-primary">Shop Collection</a>
-                    <a href="#" class="btn btn-outline">Explore Brands</a>
+                    <a href="pages/booking.html" class="btn btn-primary">Shop Collection</a>
+                    <a href="pages/services.html" class="btn btn-outline">Explore Brands</a>
                 </div>
             </div>
             <div class="hero-preview-card glass-panel">
@@ -59,31 +64,31 @@
             <div class="container">
                 <h2 class="section-title">Shop By Sport</h2>
                 <div class="sports-grid">
-                    <a href="#" class="sport-card" style="background-image: url('https://images.unsplash.com/photo-1531415074968-036ba1b575da?q=80&w=400&auto=format&fit=crop')">
+                    <a href="pages/booking.html" class="sport-card" style="background-image: url('https://images.unsplash.com/photo-1531415074968-036ba1b575da?q=80&w=400&auto=format&fit=crop')">
                         <div class="sport-overlay"></div>
                         <h3>Cricket</h3>
                     </a>
-                    <a href="#" class="sport-card" style="background-image: url('https://images.unsplash.com/photo-1579952363873-27f3bade9f55?q=80&w=400&auto=format&fit=crop')">
+                    <a href="pages/booking.html" class="sport-card" style="background-image: url('https://images.unsplash.com/photo-1579952363873-27f3bade9f55?q=80&w=400&auto=format&fit=crop')">
                         <div class="sport-overlay"></div>
                         <h3>Football</h3>
                     </a>
-                    <a href="#" class="sport-card" style="background-image: url('https://images.unsplash.com/photo-1626224583764-f87db24ac4ea?q=80&w=400&auto=format&fit=crop')">
+                    <a href="pages/booking.html" class="sport-card" style="background-image: url('https://images.unsplash.com/photo-1626224583764-f87db24ac4ea?q=80&w=400&auto=format&fit=crop')">
                         <div class="sport-overlay"></div>
                         <h3>Badminton</h3>
                     </a>
-                    <a href="#" class="sport-card" style="background-image: url('https://images.unsplash.com/photo-1511994298241-608e28f14fde?q=80&w=400&auto=format&fit=crop')">
+                    <a href="pages/booking.html" class="sport-card" style="background-image: url('https://images.unsplash.com/photo-1511994298241-608e28f14fde?q=80&w=400&auto=format&fit=crop')">
                         <div class="sport-overlay"></div>
                         <h3>Cycling</h3>
                     </a>
-                    <a href="#" class="sport-card" style="background-image: url('https://images.unsplash.com/photo-1534438327276-14e5300c3a48?q=80&w=400&auto=format&fit=crop')">
+                    <a href="pages/booking.html" class="sport-card" style="background-image: url('https://images.unsplash.com/photo-1534438327276-14e5300c3a48?q=80&w=400&auto=format&fit=crop')">
                         <div class="sport-overlay"></div>
                         <h3>Fitness</h3>
                     </a>
-                    <a href="#" class="sport-card" style="background-image: url('https://i.pinimg.com/736x/cb/0c/1c/cb0c1c29abdbbde74964c6300a862d3a.jpg')">
+                    <a href="pages/booking.html" class="sport-card" style="background-image: url('https://i.pinimg.com/736x/cb/0c/1c/cb0c1c29abdbbde74964c6300a862d3a.jpg')">
                         <div class="sport-overlay"></div>
                         <h3>Camping</h3>
                     </a>
-                    <a href="#" class="sport-card" style="background-image: url('https://i.pinimg.com/1200x/d4/5a/1a/d45a1a9f8c3308789398a32348d9fea7.jpg')">
+                    <a href="pages/booking.html" class="sport-card" style="background-image: url('https://i.pinimg.com/1200x/d4/5a/1a/d45a1a9f8c3308789398a32348d9fea7.jpg')">
                         <div class="sport-overlay"></div>
                         <h3>Swimming</h3>
                     </a>
@@ -260,6 +265,22 @@
                 <a href="pages/booking.html" class="btn btn-primary btn-large">Request A Quote</a>
             </div>
         </section>
+        <!-- Quick View Modal -->
+        <div id="quickViewModal" class="modal">
+            <div class="modal-content">
+                <span class="close-modal">&times;</span>
+                <div class="modal-body">
+                    <img id="qv-img" src="" alt="Product">
+                    <div class="qv-info">
+                        <h3 id="qv-title">Title</h3>
+                        <div id="qv-rating" class="rating"></div>
+                        <p id="qv-price" class="price">$0.00</p>
+                        <p class="qv-desc">Premium quality sports equipment designed to elevate your performance. Crafted with precision for durability and maximum comfort.</p>
+                        <button class="btn btn-primary" onclick="window.location.href='pages/booking.html'">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+        </div>
     </main>
 
     <footer class="professional-footer">
@@ -268,10 +289,10 @@
                 <a href="index.html" class="footer-logo">Sportivo</a>
                 <p>Empowering athletes with premium gear, innovative technology, and uncompromising quality for every challenge.</p>
                 <div class="footer-socials">
-                    <a href="#"><i class="fab fa-facebook-f"></i></a>
-                    <a href="#"><i class="fab fa-twitter"></i></a>
-                    <a href="#"><i class="fab fa-instagram"></i></a>
-                    <a href="#"><i class="fab fa-youtube"></i></a>
+                    <a href="https://facebook.com/sportivo" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://twitter.com/sportivo" target="_blank" rel="noopener noreferrer"><i class="fab fa-twitter"></i></a>
+                    <a href="https://instagram.com/sportivo" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a>
+                    <a href="https://youtube.com/sportivo" target="_blank" rel="noopener noreferrer"><i class="fab fa-youtube"></i></a>
                 </div>
             </div>
             <div class="footer-col links-col">
@@ -282,14 +303,13 @@
                     <li><a href="pages/services.html">Services</a></li>
                     <li><a href="pages/gallery.html">Gallery</a></li>
                     <li><a href="pages/blog.html">Blog</a></li>
-                    <li><a href="pages/contact.html">Contact</a></li>
                 </ul>
             </div>
             <div class="footer-col links-col">
                 <h3>Support & Legal</h3>
                 <ul>
                     <li><a href="pages/faq.html">FAQ</a></li>
-                    <li><a href="index.html">Sitemap</a></li>
+                    <li><a href="pages/contact.html">Contact</a></li>
                     <li><a href="pages/maintenance.html">Maintenance</a></li>
                     <li><a href="pages/terms-conditions.html">Terms & Conditions</a></li>
                     <li><a href="pages/privacy-policy.html">Privacy Policy</a></li>
@@ -304,7 +324,7 @@
                 </ul>
                 <div class="footer-newsletter">
                     <p style="margin-bottom: 0.5rem; font-size: 0.9rem; color: var(--text-light);">Subscribe to our newsletter</p>
-                    <form onsubmit="event.preventDefault(); alert('Subscribed successfully!');">
+                    <form onsubmit="event.preventDefault();">
                         <input type="email" placeholder="Enter your email" required>
                         <button type="submit" aria-label="Subscribe"><i class="fas fa-paper-plane"></i></button>
                     </form>

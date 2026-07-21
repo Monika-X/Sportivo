@@ -108,46 +108,26 @@
 
 /* 5. Sports Tips */
 .tips-layout {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 2rem;
 }
-.tip-main {
-    flex: 1.5;
-    position: relative;
-    border-radius: 16px;
-    overflow: hidden;
-}
-.tip-main img { width: 100%; height: 100%; object-fit: cover; min-height: 400px; }
-.tip-content {
-    position: absolute;
-    bottom: 0; left: 0; width: 100%;
-    padding: 2rem;
-    background: linear-gradient(transparent, rgba(0,0,0,0.9));
-    color: #FFF;
-}
-.tip-content h3 { font-size: 1.8rem; margin: 0.5rem 0; }
-.tip-list {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
-}
 .tip-item {
-    display: flex;
-    gap: 1rem;
     background: var(--card-bg);
     border-radius: 12px;
     overflow: hidden;
     border: 1px solid var(--border-color);
     transition: transform 0.3s ease;
+    display: flex;
+    flex-direction: column;
 }
-.tip-item:hover { transform: translateX(-10px); }
-[dir="rtl"] .tip-item:hover { transform: translateX(10px); }
-.tip-img { width: 120px; flex-shrink: 0; }
+.tip-item:hover { transform: translateY(-10px); }
+.tip-img { width: 100%; height: 200px; }
 .tip-img img { width: 100%; height: 100%; object-fit: cover; }
-.tip-text { padding: 1rem; display: flex; flex-direction: column; justify-content: center; }
-.tip-text h4 { font-size: 1.1rem; margin-bottom: 0.5rem; }
-.tip-text span { font-size: 0.8rem; color: var(--text-light); }
+.tip-text { padding: 1.5rem; }
+.tip-text h4 { font-size: 1.2rem; margin-bottom: 0.5rem; }
+.tip-text span { font-size: 0.9rem; color: var(--text-light); }
+.tip-text .blog-badge { margin-bottom: 0.5rem; display: inline-block; }
 
 /* 6. Equipment Reviews */
 .review-grid {
@@ -201,3 +181,4 @@
 @media(max-width: 600px) {
     .newsletter-form { flex-direction: column; }
 }
+.hidden-item { display: none !important; }

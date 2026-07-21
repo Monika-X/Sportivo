@@ -63,10 +63,16 @@
 .password-wrapper { position: relative; }
 .toggle-password {
     position: absolute;
-    right: 15px; top: 50%;
+    right: 15px;
+    left: auto;
+    top: 50%;
     transform: translateY(-50%);
     cursor: pointer;
     color: var(--text-light);
+}
+[dir="rtl"] .toggle-password {
+    right: auto;
+    left: 15px;
 }
 .auth-options { display: flex; justify-content: space-between; font-size: 0.9rem; align-items: center; }
 .forgot-pwd { color: var(--primary-color); text-decoration: none; font-weight: 500; }
@@ -82,4 +88,53 @@
     .auth-container.reverse { flex-direction: column; }
     .auth-image { height: 250px; }
     .auth-form-wrapper { padding: 2rem; }
+}
+
+/* Floating Auth Toggles */
+.auth-controls {
+    position: fixed;
+    top: 1.5rem;
+    right: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    z-index: 100;
+}
+
+[dir="rtl"] .auth-controls {
+    right: auto;
+    left: 1.5rem;
+}
+
+/* Hide native browser password reveal button */
+input[type="password"]::-ms-reveal,
+input[type="password"]::-ms-clear,
+input[type="password"]::-webkit-credentials-auto-fill-button,
+input[type="password"]::-webkit-textfield-decoration-container {
+    display: none !important;
+    visibility: hidden !important;
+}
+
+input[type="password"] {
+    -webkit-appearance: none;
+    appearance: none;
+}
+
+.auth-controls button {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    color: var(--text-color);
+    padding: 0.6rem 0.9rem;
+    border-radius: 10px;
+    cursor: pointer;
+    box-shadow: var(--shadow-sm);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.auth-controls button:hover {
+    border-color: var(--primary-color);
+    color: var(--primary-color);
 }

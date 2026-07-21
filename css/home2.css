@@ -243,22 +243,25 @@
 }
 .guide-item {
     display: flex;
-    align-items: center;
-    padding: 1.5rem;
+    flex-direction: column;
+    padding: 0;
     background: var(--card-bg);
     border: 1px solid var(--border-color);
     border-radius: 12px;
-    text-decoration: none;
     color: var(--text-color);
     transition: all 0.3s ease;
+    overflow: hidden;
+    cursor: pointer;
 }
 .guide-item:hover {
     border-color: var(--primary-color);
-    transform: translateX(10px);
     box-shadow: var(--shadow-sm);
 }
-[dir="rtl"] .guide-item:hover {
-    transform: translateX(-10px);
+.guide-header {
+    display: flex;
+    align-items: center;
+    padding: 1.5rem;
+    width: 100%;
 }
 .guide-icon {
     width: 50px; height: 50px;
@@ -274,10 +277,30 @@
     margin-left: 1.5rem;
 }
 .guide-text { flex: 1; }
-.guide-text h3 { font-size: 1.1rem; margin-bottom: 0.3rem; }
-.guide-text p { font-size: 0.9rem; color: var(--text-light); }
-.guide-item .arrow { color: var(--text-light); transition: color 0.3s ease; }
+.guide-text h3 { font-size: 1.1rem; margin-bottom: 0; }
+.guide-item .arrow { color: var(--text-light); transition: transform 0.3s ease, color 0.3s ease; }
 .guide-item:hover .arrow { color: var(--primary-color); }
+
+.guide-content-dropdown {
+    max-height: 0;
+    padding: 0 1.5rem;
+    opacity: 0;
+    transition: all 0.3s ease;
+}
+.guide-content-dropdown p { font-size: 0.95rem; color: var(--text-light); margin: 0; line-height: 1.6; }
+
+.guide-item.active {
+    border-color: var(--primary-color);
+    box-shadow: var(--shadow-sm);
+}
+.guide-item.active .guide-content-dropdown {
+    max-height: 200px;
+    padding: 0 1.5rem 1.5rem 1.5rem;
+    opacity: 1;
+}
+.guide-item.active .arrow {
+    transform: rotate(180deg);
+}
 
 .guide-image {
     flex: 1;
