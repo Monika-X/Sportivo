@@ -187,12 +187,37 @@ a {
   transition: background-color 0.3s ease;
 }
 
+.logo-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+}
+
 .logo {
   font-family: 'Space Grotesk', sans-serif;
-  font-size: 1.8rem;
+  font-size: 2.2rem;
   font-weight: 800;
-  color: var(--primary-color);
-  letter-spacing: -0.5px;
+  font-style: italic;
+  text-transform: uppercase;
+  background: linear-gradient(135deg, var(--accent-color), #FF2A55);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  letter-spacing: 0.5px;
+  line-height: 0.9;
+  padding-right: 8px; /* Prevent italic letter at the end from clipping */
+}
+
+.logo-tagline {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.7rem;
+  font-weight: 700;
+  color: var(--text-color);
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  margin-top: 2px;
+  opacity: 0.8;
 }
 
 .nav-links {
