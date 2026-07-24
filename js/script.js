@@ -76,35 +76,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // Wishlist / Like Button Toggle
-  const wishlistBtns = document.querySelectorAll('.wishlist-btn');
-  wishlistBtns.forEach(btn => {
-    btn.addEventListener('click', (e) => {
-      e.preventDefault();
-      
-      // Remove animation class to restart it if clicked quickly
-      btn.classList.remove('liked');
-      
-      // Force a reflow to restart animation
-      void btn.offsetWidth;
-      
-      const icon = btn.querySelector('i');
-      if (icon) {
-        if (icon.classList.contains('far')) {
-          icon.classList.remove('far');
-          icon.classList.add('fas');
-          btn.style.color = '#ff4757'; // Ensure it's red when liked
-        } else {
-          icon.classList.remove('fas');
-          icon.classList.add('far');
-          btn.style.color = ''; // Reset color
-        }
-      }
-      
-      // Add animation class
-      btn.classList.add('liked');
-    });
-  });
 
   // Active Link Indication
   const currentPath = window.location.pathname;

@@ -155,8 +155,8 @@
 .hours-list li:last-child { border-bottom: none; }
 
 /* 6. Google Map */
-.map-section { line-height: 0; }
-.map-section iframe { filter: grayscale(20%); }
+.map-section { line-height: 0; padding: 0 5%; }
+.map-section iframe { filter: grayscale(20%); border-radius: 16px; }
 
 /* 7. FAQ Preview */
 .faq-grid {
