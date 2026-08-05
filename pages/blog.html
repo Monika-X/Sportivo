@@ -12,25 +12,33 @@
 <body>
     <nav class="navbar">
         <a href="../index.html" class="logo-container">
-            <span class="logo">Sportivo</span>
-            <span class="logo-tagline">Elite Sports Gear</span>
+            <img src="../favicon.svg" alt="Sportivo Logo" class="logo-img">
+            <span class="logo-text">
+                <span class="logo">Sportivo</span>
+                <span class="logo-tagline">Elite Sports Gear</span>
+            </span>
         </a>
         <ul class="nav-links" id="nav-links">
             <li><a href="../index.html">Home</a></li>
-                    <li><a href="home2.html">Home 2</a></li>
             <li><a href="home2.html">Home 2</a></li>
             <li><a href="about.html">About</a></li>
-            <li><a href="services.html">Services</a></li>
+            <li><a href="services.html">Shop</a></li>
             <li><a href="gallery.html">Gallery</a></li>
             <li><a href="blog.html">Blog</a></li>
             <li><a href="contact.html">Contact</a></li>
         </ul>
         <div class="nav-icons">
-            <div class="user-dropdown">
-                <button id="user-toggle" aria-label="User Profile" title="Account"><i class="fas fa-user"></i></button>
-                <div class="user-dropdown-menu" id="user-dropdown-menu">
-                    <a href="login.html"><i class="fas fa-sign-in-alt"></i> Login</a>
-                    <a href="signup.html"><i class="fas fa-user-plus"></i> Sign Up</a>
+            <a href="contact.html" class="btn btn-primary nav-book-cta"><i class="fas fa-calendar-check"></i> Book a Service</a>
+            <div class="cart-dropdown">
+                <button id="cart-toggle" aria-label="Shopping Cart" title="Cart"><i class="fas fa-shopping-cart"></i><span class="cart-badge" id="cart-count">0</span></button>
+                <div class="cart-dropdown-menu" id="cart-dropdown-menu">
+                    <p class="cart-empty" id="cart-empty"><i class="fas fa-shopping-cart"></i> Your cart is empty</p>
+                    <div class="cart-items" id="cart-items"></div>
+                    <div class="cart-footer" id="cart-footer" style="display: none;">
+                        <div class="cart-total"><span>Total</span><strong id="cart-total-price">$0.00</strong></div>
+                        <a href="booking.html" class="btn btn-primary cart-checkout"><i class="fas fa-bolt"></i> Buy Now</a>
+                    </div>
+                    <a href="booking.html" class="btn btn-primary cart-cta">Shop Collection</a>
                 </div>
             </div>
             <button id="theme-toggle" aria-label="Toggle Theme" title="Toggle Theme"><i class="fas fa-moon"></i></button>
@@ -157,7 +165,7 @@
                     </div>
                 </div>
                 <div style="text-align: center; margin-top: 3rem;">
-                    <a href="#" class="btn btn-primary" onclick="toggleReadMore(event, 'latest-articles-grid', 3)">Read More</a>
+                    <a href="#" class="btn btn-primary" data-label="Show All Articles" onclick="toggleReadMore(event, 'latest-articles-grid', 3)">Show All Articles</a>
                 </div>
             </div>
         </section>
@@ -171,77 +179,77 @@
                         <i class="fas fa-campground guide-icon"></i>
                         <h3 style="color: #fff;">Camping Tents</h3>
                         <p style="color: #ddd;">How to select a tent based on season, capacity, and weight.</p>
-                        <a href="#" class="btn btn-outline" style="color: #fff; border-color: #fff;">Explore Guide</a>
+                        <a href="#" class="btn btn-outline">Explore Guide</a>
                     </div>
                     <div class="guide-card" style="background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://i.pinimg.com/736x/ef/a2/31/efa2319b2824c82d4062c1cae1688f07.jpg') center/cover;">
                         <i class="fas fa-bicycle guide-icon"></i>
                         <h3 style="color: #fff;">Road Bikes</h3>
                         <p style="color: #ddd;">Carbon vs Aluminum frames: What beginners need to know.</p>
-                        <a href="#" class="btn btn-outline" style="color: #fff; border-color: #fff;">Explore Guide</a>
+                        <a href="#" class="btn btn-outline">Explore Guide</a>
                     </div>
                     <div class="guide-card" style="background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://i.pinimg.com/736x/ce/b4/1d/ceb41df7737b5918904522051f1f56f5.jpg') center/cover;">
                         <i class="fas fa-dumbbell guide-icon"></i>
                         <h3 style="color: #fff;">Home Gyms</h3>
                         <p style="color: #ddd;">Building an effective workout space on any budget.</p>
-                        <a href="#" class="btn btn-outline" style="color: #fff; border-color: #fff;">Explore Guide</a>
+                        <a href="#" class="btn btn-outline">Explore Guide</a>
                     </div>
                     <div class="guide-card" style="background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://i.pinimg.com/1200x/6f/2b/e0/6f2be0a171159deec672f2ded88282bd.jpg') center/cover;">
                         <i class="fas fa-running guide-icon"></i>
                         <h3 style="color: #fff;">Running Shoes</h3>
                         <p style="color: #ddd;">Finding the right fit for your foot strike and distance.</p>
-                        <a href="#" class="btn btn-outline" style="color: #fff; border-color: #fff;">Explore Guide</a>
+                        <a href="#" class="btn btn-outline">Explore Guide</a>
                     </div>
                     <div class="guide-card" style="background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://i.pinimg.com/736x/09/c4/5a/09c45ab4ac5dfad413d856fc0a4700e5.jpg') center/cover;">
                         <i class="fas fa-futbol guide-icon"></i>
                         <h3 style="color: #fff;">Soccer Balls</h3>
                         <p style="color: #ddd;">A guide to ball sizes, materials, and match quality.</p>
-                        <a href="#" class="btn btn-outline" style="color: #fff; border-color: #fff;">Explore Guide</a>
+                        <a href="#" class="btn btn-outline">Explore Guide</a>
                     </div>
                     <div class="guide-card" style="background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1530549387789-4c1017266635?q=80&w=600&auto=format&fit=crop') center/cover;">
                         <i class="fas fa-swimmer guide-icon"></i>
                         <h3 style="color: #fff;">Swim Gear</h3>
                         <p style="color: #ddd;">Goggles, caps, and swimsuits for competitive swimmers.</p>
-                        <a href="#" class="btn btn-outline" style="color: #fff; border-color: #fff;">Explore Guide</a>
+                        <a href="#" class="btn btn-outline">Explore Guide</a>
                     </div>
                     <div class="guide-card" style="background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://i.pinimg.com/1200x/7a/c5/0c/7ac50c41aca4610291b1f2734828f5c0.jpg') center/cover;">
                         <i class="fas fa-baseball-ball guide-icon"></i>
                         <h3 style="color: #fff;">Baseball Gloves</h3>
                         <p style="color: #ddd;">Finding the right fit for your position and playing style.</p>
-                        <a href="#" class="btn btn-outline" style="color: #fff; border-color: #fff;">Explore Guide</a>
+                        <a href="#" class="btn btn-outline">Explore Guide</a>
                     </div>
                     <div class="guide-card" style="background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://i.pinimg.com/1200x/47/06/d1/4706d1d86624fd3c9b1f3a13fd617ef4.jpg') center/cover;">
                         <i class="fas fa-skating guide-icon"></i>
                         <h3 style="color: #fff;">Ice Skates</h3>
                         <p style="color: #ddd;">A guide to skate blades, boots, and sizing.</p>
-                        <a href="#" class="btn btn-outline" style="color: #fff; border-color: #fff;">Explore Guide</a>
+                        <a href="#" class="btn btn-outline">Explore Guide</a>
                     </div>
                     <div class="guide-card" style="background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://i.pinimg.com/736x/16/50/79/165079f75c07d1c367c81b5a69d1d07a.jpg') center/cover;">
                         <i class="fas fa-table-tennis guide-icon"></i>
                         <h3 style="color: #fff;">Tennis Rackets</h3>
                         <p style="color: #ddd;">Head size, weight, and balance considerations for beginners.</p>
-                        <a href="#" class="btn btn-outline" style="color: #fff; border-color: #fff;">Explore Guide</a>
+                        <a href="#" class="btn btn-outline">Explore Guide</a>
                     </div>
                     <div class="guide-card" style="background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://i.pinimg.com/736x/ce/7c/b2/ce7cb28b08ccbd187e3424188790e12a.jpg') center/cover;">
                         <i class="fas fa-golf-ball guide-icon"></i>
                         <h3 style="color: #fff;">Golf Clubs</h3>
                         <p style="color: #ddd;">Understanding irons, woods, and putters for your game.</p>
-                        <a href="#" class="btn btn-outline" style="color: #fff; border-color: #fff;">Explore Guide</a>
+                        <a href="#" class="btn btn-outline">Explore Guide</a>
                     </div>
                     <div class="guide-card" style="background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://i.pinimg.com/736x/b0/d1/71/b0d1716383ad405a0bb8eef69360e50f.jpg') center/cover;">
                         <i class="fas fa-volleyball-ball guide-icon"></i>
                         <h3 style="color: #fff;">Volleyball Nets</h3>
                         <p style="color: #ddd;">Indoor vs outdoor setups and material differences.</p>
-                        <a href="#" class="btn btn-outline" style="color: #fff; border-color: #fff;">Explore Guide</a>
+                        <a href="#" class="btn btn-outline">Explore Guide</a>
                     </div>
                     <div class="guide-card" style="background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://i.pinimg.com/1200x/45/3b/32/453b32a15ba482bb617c0662bcd3143a.jpg') center/cover;">
                         <i class="fas fa-snowboarding guide-icon"></i>
                         <h3 style="color: #fff;">Snowboards</h3>
                         <p style="color: #ddd;">Choosing camber vs rocker profiles based on terrain.</p>
-                        <a href="#" class="btn btn-outline" style="color: #fff; border-color: #fff;">Explore Guide</a>
+                        <a href="#" class="btn btn-outline">Explore Guide</a>
                     </div>
                 </div>
                 <div style="text-align: center; margin-top: 3rem;">
-                    <a href="#" class="btn btn-primary" onclick="toggleReadMore(event, 'buying-guides-grid', 4)">Read More</a>
+                    <a href="#" class="btn btn-primary" data-label="Show All Guides" onclick="toggleReadMore(event, 'buying-guides-grid', 4)">Show All Guides</a>
                 </div>
             </div>
         </section>
@@ -252,65 +260,80 @@
                 <h2 class="section-title">Sports Tips & Nutrition</h2>
                 <div class="tips-layout" id="sports-tips-grid">
                     <div class="tip-item">
-                        <div class="tip-img"><img src="https://images.unsplash.com/photo-1517836357463-d25dfeac3438?q=80&w=800&auto=format&fit=crop" alt="Nutrition"></div>
+                        <div class="tip-img"><img src="https://images.unsplash.com/photo-1517836357463-d25dfeac3438?q=80&w=800&auto=format&fit=crop" alt="Pre-Workout Fuel"></div>
                         <div class="tip-text">
                             <span class="blog-badge">Nutrition</span>
                             <h4>Pre-Workout Fuel: What to Eat Before Training</h4>
-                            <p style="color: var(--text-light); font-size: 0.9rem;">Maximize your energy levels with the right balance of carbs and protein.</p>
+                            <p>Maximize your energy levels with the right balance of carbs and protein.</p>
+                            <span class="tip-date">Oct 15, 2026</span>
                         </div>
                     </div>
                     <div class="tip-item">
-                        <div class="tip-img"><img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?q=80&w=300&auto=format&fit=crop" alt="Tip"></div>
+                        <div class="tip-img"><img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?q=80&w=800&auto=format&fit=crop" alt="Recovery Days"></div>
                         <div class="tip-text">
+                            <span class="blog-badge">Recovery</span>
                             <h4>The Importance of Recovery Days</h4>
-                            <span>Oct 12, 2026</span>
+                            <p>Why rest days are essential for muscle repair and performance gains.</p>
+                            <span class="tip-date">Oct 12, 2026</span>
                         </div>
                     </div>
                     <div class="tip-item">
-                        <div class="tip-img"><img src="https://i.pinimg.com/736x/94/f2/79/94f2795d8831af7665da365e6242e623.jpg" alt="Tip"></div>
+                        <div class="tip-img"><img src="https://i.pinimg.com/736x/94/f2/79/94f2795d8831af7665da365e6242e623.jpg" alt="Winter Hydration"></div>
                         <div class="tip-text">
+                            <span class="blog-badge">Hydration</span>
                             <h4>Staying Hydrated During Winter Sports</h4>
-                            <span>Oct 08, 2026</span>
+                            <p>Cold-weather hydration tips to keep your performance on track.</p>
+                            <span class="tip-date">Oct 08, 2026</span>
                         </div>
                     </div>
                     <div class="tip-item">
-                        <div class="tip-img"><img src="https://i.pinimg.com/736x/88/2f/fe/882ffe9d80e972f81979317d4f7ff32d.jpg" alt="Tip"></div>
+                        <div class="tip-img"><img src="https://i.pinimg.com/736x/88/2f/fe/882ffe9d80e972f81979317d4f7ff32d.jpg" alt="Swimming Breathing"></div>
                         <div class="tip-text">
+                            <span class="blog-badge">Technique</span>
                             <h4>Breathing Techniques for Swimming</h4>
-                            <span>Oct 05, 2026</span>
+                            <p>Master your breath to swim faster with less effort.</p>
+                            <span class="tip-date">Oct 05, 2026</span>
                         </div>
                     </div>
                     <div class="tip-item">
-                        <div class="tip-img"><img src="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?q=80&w=300&auto=format&fit=crop" alt="Tip"></div>
+                        <div class="tip-img"><img src="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?q=80&w=800&auto=format&fit=crop" alt="Stretching"></div>
                         <div class="tip-text">
+                            <span class="blog-badge">Flexibility</span>
                             <h4>Stretching for Flexibility</h4>
-                            <span>Sep 28, 2026</span>
+                            <p>Simple stretches to improve mobility and prevent injury.</p>
+                            <span class="tip-date">Sep 28, 2026</span>
                         </div>
                     </div>
                     <div class="tip-item">
-                        <div class="tip-img"><img src="https://i.pinimg.com/1200x/94/f8/83/94f883607e4e1f98315ebbff1b55b206.jpg" alt="Tip"></div>
+                        <div class="tip-img"><img src="https://i.pinimg.com/1200x/94/f8/83/94f883607e4e1f98315ebbff1b55b206.jpg" alt="Mental Toughness"></div>
                         <div class="tip-text">
+                            <span class="blog-badge">Mindset</span>
                             <h4>Mental Toughness in Sports</h4>
-                            <span>Sep 25, 2026</span>
+                            <p>Build the mental resilience that champions rely on.</p>
+                            <span class="tip-date">Sep 25, 2026</span>
                         </div>
                     </div>
                     <div class="tip-item">
-                        <div class="tip-img"><img src="https://images.unsplash.com/photo-1517649763962-0c623066013b?q=80&w=300&auto=format&fit=crop" alt="Tip"></div>
+                        <div class="tip-img"><img src="https://images.unsplash.com/photo-1517649763962-0c623066013b?q=80&w=800&auto=format&fit=crop" alt="Bike Fitting"></div>
                         <div class="tip-text">
+                            <span class="blog-badge">Cycling</span>
                             <h4>Proper Bike Fitting</h4>
-                            <span>Sep 20, 2026</span>
+                            <p>Dial in your bike setup to ride stronger and injury-free.</p>
+                            <span class="tip-date">Sep 20, 2026</span>
                         </div>
                     </div>
                     <div class="tip-item">
-                        <div class="tip-img"><img src="https://images.unsplash.com/photo-1530549387789-4c1017266635?q=80&w=300&auto=format&fit=crop" alt="Tip"></div>
+                        <div class="tip-img"><img src="https://images.unsplash.com/photo-1530549387789-4c1017266635?q=80&w=800&auto=format&fit=crop" alt="Core Strength"></div>
                         <div class="tip-text">
+                            <span class="blog-badge">Training</span>
                             <h4>Improving Core Strength</h4>
-                            <span>Sep 15, 2026</span>
+                            <p>Core exercises that boost stability and power in every sport.</p>
+                            <span class="tip-date">Sep 15, 2026</span>
                         </div>
                     </div>
                 </div>
-                <div style="text-align: center; margin-top: 3rem;">
-                    <a href="#" class="btn btn-primary" onclick="toggleReadMore(event, 'sports-tips-grid', 4)">Read More</a>
+                <div class="tips-read-more">
+                    <a href="#" class="btn btn-primary" data-label="Show All Tips" onclick="toggleReadMore(event, 'sports-tips-grid', 4)">Show All Tips</a>
                 </div>
             </div>
         </section>
@@ -376,7 +399,7 @@
                     </div>
                 </div>
                 <div style="text-align: center; margin-top: 3rem;">
-                    <a href="#" class="btn btn-primary" onclick="toggleReadMore(event, 'equipment-reviews-grid', 3)">Read More</a>
+                    <a href="#" class="btn btn-primary" data-label="Show All Reviews" onclick="toggleReadMore(event, 'equipment-reviews-grid', 3)">Show All Reviews</a>
                 </div>
             </div>
         </section>
@@ -397,7 +420,7 @@
     <footer class="professional-footer">
         <div class="container footer-grid">
             <div class="footer-col brand-col">
-                <a href="../index.html" class="footer-logo">Sportivo</a>
+                <a href="../index.html" class="footer-logo"><img src="../favicon.svg" alt="Sportivo Logo" class="footer-logo-img"> Sportivo</a>
                 <p>Empowering athletes with premium gear, innovative technology, and uncompromising quality for every challenge.</p>
                 <div class="footer-socials">
                     <a href="https://facebook.com/sportivo" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook-f"></i></a>
@@ -473,7 +496,7 @@
                 }
             });
             
-            btn.innerText = isShowingAll ? 'Read More' : 'Show Less';
+            btn.innerText = isShowingAll ? btn.dataset.label : 'Show Less';
         }
 
         document.addEventListener('DOMContentLoaded', () => {

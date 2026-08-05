@@ -153,6 +153,16 @@
     background: var(--text-color);
     color: var(--bg-color);
 }
+.review-buy-box .wishlist-btn {
+    position: static;
+    flex-shrink: 0;
+}
+.review-buy-box .wishlist-btn:hover {
+    background: #fff;
+}
+.review-buy-box .wishlist-btn.active {
+    background: #EF4444;
+}
 
 /* Responsiveness down to 320px */
 @media (max-width: 768px) {

@@ -36,7 +36,7 @@
 .info-card:hover { transform: translateY(-10px); box-shadow: var(--shadow-lg); }
 .info-icon {
     width: 70px; height: 70px;
-    background: rgba(10, 132, 255, 0.1);
+    background: rgba(249, 115, 22, 0.1);
     color: var(--primary-color);
     border-radius: 50%;
     display: flex; align-items: center; justify-content: center;
@@ -87,7 +87,7 @@
 .form-group input:focus, .form-group textarea:focus {
     outline: none;
     border-color: var(--primary-color);
-    box-shadow: 0 0 0 3px rgba(10, 132, 255, 0.1);
+    box-shadow: 0 0 0 3px rgba(249, 115, 22, 0.1);
 }
 
 /* 4. Social Media */
@@ -174,6 +174,8 @@
 .faq-item p { color: var(--text-light); line-height: 1.6; }
 
 @media(max-width: 900px) {
+    .contact-hero { background-attachment: scroll; }
+    .hero-title { font-size: 3.2rem; }
     .hours-card { flex-direction: column; }
     .hours-img { height: 300px; }
     .hours-content { padding: 2rem; }
@@ -182,6 +184,7 @@
     .contact-form { grid-template-columns: 1fr; }
     .form-wrapper { padding: 2rem; }
     .faq-grid { grid-template-columns: 1fr; }
+    .hours-list li span { white-space: normal; }
 }
 @media(max-width: 425px) {
     .hero-title { font-size: 2.5rem; }

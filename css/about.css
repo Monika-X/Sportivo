@@ -366,6 +366,8 @@
 
 /* Responsive */
 @media(max-width: 768px) {
+    .about-hero .hero-title { font-size: 3rem; }
+    .about-hero .hero-subtitle { font-size: 1.2rem; }
 
     .story-wrapper,
     .mv-grid {

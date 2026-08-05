@@ -169,6 +169,8 @@
 
 /* Responsiveness */
 @media(max-width: 992px) {
+    .booking-hero { background-attachment: scroll; }
+    .booking-hero h1 { font-size: 3rem; }
     .forms-grid {
         grid-template-columns: 1fr;
         gap: 4rem;

@@ -1,5 +1,100 @@
 /* Home 2 Unique Styles */
 
+/* 0. Hero */
+.hero2 {
+    position: relative;
+    padding: 5rem 0 7rem;
+    overflow: hidden;
+}
+.hero2-bg {
+    position: absolute;
+    inset: 0;
+    background:
+        radial-gradient(circle at 85% 20%, rgba(249, 115, 22, 0.14), transparent 55%),
+        radial-gradient(circle at 10% 90%, rgba(249, 115, 22, 0.08), transparent 45%);
+    z-index: 0;
+}
+.hero2-content {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+}
+.hero2-text { flex: 1.2; }
+.hero2-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: rgba(249, 115, 22, 0.12);
+    color: var(--primary-color);
+    padding: 0.5rem 1.1rem;
+    border-radius: 30px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    margin-bottom: 1.5rem;
+}
+.hero2-text h1 {
+    font-size: 3.5rem;
+    line-height: 1.08;
+    margin-bottom: 1.2rem;
+}
+.hero2-text h1 span { color: var(--primary-color); }
+.hero2-text > p {
+    color: var(--text-light);
+    font-size: 1.15rem;
+    line-height: 1.7;
+    margin-bottom: 2rem;
+    max-width: 480px;
+}
+.hero2-actions {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin-bottom: 3rem;
+}
+.hero2-stats {
+    display: flex;
+    gap: 2.5rem;
+    flex-wrap: wrap;
+}
+.stat strong {
+    font-size: 1.6rem;
+    font-family: 'Space Grotesk', sans-serif;
+    color: var(--primary-color);
+    display: block;
+    line-height: 1.2;
+}
+.stat span { color: var(--text-light); font-size: 0.9rem; }
+.hero2-media {
+    flex: 1;
+    position: relative;
+}
+.hero2-media img {
+    width: 100%;
+    max-height: 500px;
+    object-fit: cover;
+    border-radius: 20px;
+    box-shadow: var(--shadow-lg);
+}
+.hero2-floating-card {
+    position: absolute;
+    bottom: -20px;
+    left: -20px;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem 1.5rem;
+    border-radius: 14px;
+}
+[dir="rtl"] .hero2-floating-card { left: auto; right: -20px; }
+.hero2-floating-card i {
+    font-size: 1.8rem;
+    color: var(--primary-color);
+}
+.hero2-floating-card strong { display: block; }
+.hero2-floating-card span { color: var(--text-light); font-size: 0.85rem; }
+
 /* 1. Pro Collections - Masonry Layout */
 .section-header {
     margin-bottom: 2.5rem;
@@ -71,6 +166,22 @@
 [dir="rtl"] .btn-link {
     flex-direction: row-reverse;
     justify-content: flex-end;
+}
+
+/* Bestsellers */
+.bestsellers-header {
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+.bestsellers-header .view-all {
+    color: var(--primary-color);
+    padding-bottom: 0.5rem;
+}
+.bestsellers .product-grid {
+    margin-top: 1rem;
 }
 
 /* 2. Outdoor Adventure - Overlapping Floating Box */
@@ -179,6 +290,9 @@
 .cycle-card:not(.featured-cycle):hover {
     transform: translateY(-10px);
 }
+.cycle-shop {
+    justify-content: center;
+}
 
 /* 4. Fitness Showcase - Center Stage */
 .fitness-showcase {
@@ -189,6 +303,10 @@
     margin-bottom: 4rem;
 }
 .showcase-header h2 { font-size: 2.5rem; }
+.showcase-actions {
+    text-align: center;
+    margin: -2.5rem 0 3rem;
+}
 .showcase-grid {
     display: flex;
     align-items: center;
@@ -275,7 +393,7 @@
 }
 .guide-icon {
     width: 50px; height: 50px;
-    background: rgba(10, 132, 255, 0.1);
+    background: rgba(249, 115, 22, 0.1);
     color: var(--primary-color);
     display: flex; justify-content: center; align-items: center;
     border-radius: 10px;
@@ -343,7 +461,7 @@
     position: absolute;
     top: 2rem; right: 2rem;
     font-size: 3rem;
-    color: rgba(10, 132, 255, 0.1);
+    color: rgba(249, 115, 22, 0.1);
 }
 [dir="rtl"] .quote-icon {
     right: auto;
@@ -416,8 +534,51 @@
     margin-bottom: 2rem;
 }
 
+/* 8. Final CTA */
+.final-cta {
+    position: relative;
+    padding: 6rem 0;
+    text-align: center;
+    overflow: hidden;
+    background-color: var(--nav-bg);
+}
+.final-cta-bg {
+    position: absolute;
+    inset: 0;
+    background:
+        linear-gradient(135deg, rgba(249, 115, 22, 0.16), rgba(234, 88, 12, 0.08)),
+        radial-gradient(circle at 50% 120%, rgba(249, 115, 22, 0.15), transparent 60%);
+}
+.final-cta-content {
+    position: relative;
+    z-index: 1;
+}
+.final-cta-content h2 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+.final-cta-content p {
+    color: var(--text-light);
+    font-size: 1.15rem;
+    margin-bottom: 2.5rem;
+}
+.final-cta-actions {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
 /* Responsive Overrides */
 @media (max-width: 1024px) {
+    .hero2-content { flex-direction: column; gap: 3.5rem; }
+    .hero2-text { text-align: center; }
+    .hero2-text > p { margin-left: auto; margin-right: auto; }
+    .hero2-actions { justify-content: center; }
+    .hero2-stats { justify-content: center; }
+    .hero2-media { width: 100%; }
+    .hero2-floating-card { left: 1rem; }
+    [dir="rtl"] .hero2-floating-card { right: 1rem; }
     .outdoor-image { width: 100%; }
     .outdoor-content {
         position: relative;
@@ -428,6 +589,9 @@
     [dir="rtl"] .outdoor-content { left: auto; right: auto; margin: -100px auto 0 auto; }
 }
 @media (max-width: 768px) {
+    .hero2 { padding: 3.5rem 0 5rem; }
+    .hero2-text h1 { font-size: 2.6rem; }
+    .hero2-stats { gap: 1.5rem; }
     .masonry-grid { grid-template-columns: 1fr; grid-template-rows: auto; }
     .masonry-item { height: 300px; }
     .masonry-item.large { grid-row: auto; }
@@ -440,9 +604,15 @@
     [dir="rtl"] .showcase-features.left, [dir="rtl"] .showcase-features.right { text-align: center; }
     .guide-wrapper { flex-direction: column; }
     .seasonal-offers { flex-direction: column; height: 800px; }
+    .final-cta-content h2 { font-size: 2.2rem; }
 }
 
 @media (max-width: 425px) {
+    .hero2-text h1 { font-size: 2rem; }
+    .hero2-badge { font-size: 0.8rem; }
+    .hero2-stats { gap: 1rem; }
+    .stat strong { font-size: 1.3rem; }
+    .hero2-floating-card { padding: 0.75rem 1rem; bottom: -16px; }
     .masonry-item { height: 220px; }
     .masonry-content h3 { font-size: 1.4rem; }
     .masonry-content { bottom: 1rem; left: 1rem; right: auto; }
@@ -451,9 +621,15 @@
     .offer-content h2 { font-size: 2rem; }
     .offer-content h3 { font-size: 1.2rem; }
     .outdoor-content { padding: 1.5rem; margin: -60px auto 0 auto; }
+    .final-cta { padding: 4rem 0; }
+    .final-cta-content h2 { font-size: 1.8rem; }
+    .reviews-grid { grid-template-columns: 1fr; }
 }
 
 @media (max-width: 360px) {
+    .hero2-text h1 { font-size: 1.8rem; }
+    .hero2-stats { gap: 0.75rem; }
+    .stat strong { font-size: 1.1rem; }
     .masonry-item { height: 180px; }
     .masonry-content h3 { font-size: 1.2rem; }
     .offer-content h2 { font-size: 1.8rem; }

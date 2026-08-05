@@ -52,7 +52,8 @@
 .featured-content p { color: var(--text-light); margin-bottom: 1.5rem; line-height: 1.6; }
 .blog-meta {
     display: flex;
-    gap: 1.5rem;
+    flex-wrap: wrap;
+    gap: 0.75rem 1.5rem;
     color: var(--text-light);
     font-size: 0.9rem;
     margin-bottom: 2rem;
@@ -129,10 +130,31 @@
 .tip-item:hover { transform: translateY(-10px); }
 .tip-img { width: 100%; height: 200px; }
 .tip-img img { width: 100%; height: 100%; object-fit: cover; }
-.tip-text { padding: 1.5rem; }
+.tip-text {
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    flex: 1;
+}
 .tip-text h4 { font-size: 1.2rem; margin-bottom: 0.5rem; }
-.tip-text span { font-size: 0.9rem; color: var(--text-light); }
-.tip-text .blog-badge { margin-bottom: 0.5rem; display: inline-block; }
+.tip-text p {
+    color: var(--text-light);
+    font-size: 0.9rem;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+    flex-grow: 1;
+}
+.tip-date {
+    font-size: 0.85rem;
+    color: var(--text-light);
+    margin-top: auto;
+}
+.tip-text .blog-badge { margin-bottom: 0.75rem; display: inline-block; }
+.tips-read-more {
+    text-align: center;
+    margin-top: 3rem;
+}
 
 /* 6. Equipment Reviews */
 .review-grid {
@@ -147,11 +169,15 @@
     border: 1px solid var(--border-color);
     box-shadow: var(--shadow-sm);
     transition: transform 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
 }
 .review-box:hover { transform: translateY(-5px); box-shadow: var(--shadow-lg); }
 .review-box .rating { color: #FFD700; margin-bottom: 1rem; font-weight: 600; }
 .review-box h3 { margin-bottom: 1rem; }
-.review-box p { color: var(--text-light); margin-bottom: 1.5rem; font-style: italic; }
+.review-box p { color: var(--text-light); margin-bottom: 1.5rem; font-style: italic; flex-grow: 1; }
+.review-box .read-more { margin-top: auto; }
 
 /* 7. Newsletter */
 .newsletter-cta {
@@ -180,8 +206,10 @@
 }
 
 @media(max-width: 900px) {
+    .blog-hero { background-attachment: scroll; }
     .featured-card { flex-direction: column; }
-    .tips-layout { flex-direction: column; }
+    .hero-title { font-size: 3.2rem; }
+    .blog-hero { padding: 8rem 0 5rem 0; }
 }
 @media(max-width: 600px) {
     .newsletter-form { flex-direction: column; }
@@ -192,9 +220,11 @@
     .newsletter-cta { padding: 4rem 0; }
     .newsletter-cta h2 { font-size: 2rem; }
     .featured-content { padding: 1.5rem; }
+    .blog-grid, .review-grid, .guide-cards, .tips-layout { grid-template-columns: 1fr; }
 }
 @media(max-width: 360px) {
     .hero-title { font-size: 2rem; }
     .newsletter-cta h2 { font-size: 1.6rem; }
+    .featured-content h2 { font-size: 1.6rem; }
 }
 .hidden-item { display: none !important; }

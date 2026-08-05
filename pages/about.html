@@ -14,25 +14,33 @@
 <body>
     <nav class="navbar">
         <a href="../index.html" class="logo-container">
-            <span class="logo">Sportivo</span>
-            <span class="logo-tagline">Elite Sports Gear</span>
+            <img src="../favicon.svg" alt="Sportivo Logo" class="logo-img">
+            <span class="logo-text">
+                <span class="logo">Sportivo</span>
+                <span class="logo-tagline">Elite Sports Gear</span>
+            </span>
         </a>
         <ul class="nav-links" id="nav-links">
             <li><a href="../index.html">Home</a></li>
-                    <li><a href="home2.html">Home 2</a></li>
             <li><a href="home2.html">Home 2</a></li>
             <li><a href="about.html">About</a></li>
-            <li><a href="services.html">Services</a></li>
+            <li><a href="services.html">Shop</a></li>
             <li><a href="gallery.html">Gallery</a></li>
             <li><a href="blog.html">Blog</a></li>
             <li><a href="contact.html">Contact</a></li>
         </ul>
         <div class="nav-icons">
-            <div class="user-dropdown">
-                <button id="user-toggle" aria-label="User Profile" title="Account"><i class="fas fa-user"></i></button>
-                <div class="user-dropdown-menu" id="user-dropdown-menu">
-                    <a href="login.html"><i class="fas fa-sign-in-alt"></i> Login</a>
-                    <a href="signup.html"><i class="fas fa-user-plus"></i> Sign Up</a>
+            <a href="contact.html" class="btn btn-primary nav-book-cta"><i class="fas fa-calendar-check"></i> Book a Service</a>
+            <div class="cart-dropdown">
+                <button id="cart-toggle" aria-label="Shopping Cart" title="Cart"><i class="fas fa-shopping-cart"></i><span class="cart-badge" id="cart-count">0</span></button>
+                <div class="cart-dropdown-menu" id="cart-dropdown-menu">
+                    <p class="cart-empty" id="cart-empty"><i class="fas fa-shopping-cart"></i> Your cart is empty</p>
+                    <div class="cart-items" id="cart-items"></div>
+                    <div class="cart-footer" id="cart-footer" style="display: none;">
+                        <div class="cart-total"><span>Total</span><strong id="cart-total-price">$0.00</strong></div>
+                        <a href="booking.html" class="btn btn-primary cart-checkout"><i class="fas fa-bolt"></i> Buy Now</a>
+                    </div>
+                    <a href="booking.html" class="btn btn-primary cart-cta">Shop Collection</a>
                 </div>
             </div>
             <button id="theme-toggle" aria-label="Toggle Theme" title="Toggle Theme"><i
@@ -46,7 +54,7 @@
         <!-- Section 1: Hero -->
         <section class="about-hero">
             <div class="hero-bg"
-                style="background-image: linear-gradient(rgba(10, 132, 255, 0.8), rgba(0, 0, 0, 0.8)), url('https://images.unsplash.com/photo-1461896836934-ffe607ba8211?q=80&w=2000&auto=format&fit=crop');">
+                style="background-image: linear-gradient(rgba(249, 115, 22, 0.8), rgba(0, 0, 0, 0.8)), url('https://images.unsplash.com/photo-1461896836934-ffe607ba8211?q=80&w=2000&auto=format&fit=crop');">
             </div>
             <div class="container hero-content text-center">
                 <h1 class="hero-title animate-up">Our <span>Story</span></h1>
@@ -222,7 +230,7 @@
     <footer class="professional-footer">
         <div class="container footer-grid">
             <div class="footer-col brand-col">
-                <a href="../index.html" class="footer-logo">Sportivo</a>
+                <a href="../index.html" class="footer-logo"><img src="../favicon.svg" alt="Sportivo Logo" class="footer-logo-img"> Sportivo</a>
                 <p>Empowering athletes with premium gear, innovative technology, and uncompromising quality for every
                     challenge.</p>
                 <div class="footer-socials">

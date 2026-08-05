@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sportivo - Services</title>
+    <title>Sportivo - Shop Premium Gear</title>
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/services.css?v=2">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -14,25 +14,33 @@
 <body>
     <nav class="navbar">
         <a href="../index.html" class="logo-container">
-            <span class="logo">Sportivo</span>
-            <span class="logo-tagline">Elite Sports Gear</span>
+            <img src="../favicon.svg" alt="Sportivo Logo" class="logo-img">
+            <span class="logo-text">
+                <span class="logo">Sportivo</span>
+                <span class="logo-tagline">Elite Sports Gear</span>
+            </span>
         </a>
         <ul class="nav-links" id="nav-links">
             <li><a href="../index.html">Home</a></li>
-                    <li><a href="home2.html">Home 2</a></li>
             <li><a href="home2.html">Home 2</a></li>
             <li><a href="about.html">About</a></li>
-            <li><a href="services.html">Services</a></li>
+            <li><a href="services.html">Shop</a></li>
             <li><a href="gallery.html">Gallery</a></li>
             <li><a href="blog.html">Blog</a></li>
             <li><a href="contact.html">Contact</a></li>
         </ul>
         <div class="nav-icons">
-            <div class="user-dropdown">
-                <button id="user-toggle" aria-label="User Profile" title="Account"><i class="fas fa-user"></i></button>
-                <div class="user-dropdown-menu" id="user-dropdown-menu">
-                    <a href="login.html"><i class="fas fa-sign-in-alt"></i> Login</a>
-                    <a href="signup.html"><i class="fas fa-user-plus"></i> Sign Up</a>
+            <a href="contact.html" class="btn btn-primary nav-book-cta"><i class="fas fa-calendar-check"></i> Book a Service</a>
+            <div class="cart-dropdown">
+                <button id="cart-toggle" aria-label="Shopping Cart" title="Cart"><i class="fas fa-shopping-cart"></i><span class="cart-badge" id="cart-count">0</span></button>
+                <div class="cart-dropdown-menu" id="cart-dropdown-menu">
+                    <p class="cart-empty" id="cart-empty"><i class="fas fa-shopping-cart"></i> Your cart is empty</p>
+                    <div class="cart-items" id="cart-items"></div>
+                    <div class="cart-footer" id="cart-footer" style="display: none;">
+                        <div class="cart-total"><span>Total</span><strong id="cart-total-price">$0.00</strong></div>
+                        <a href="booking.html" class="btn btn-primary cart-checkout"><i class="fas fa-bolt"></i> Buy Now</a>
+                    </div>
+                    <a href="booking.html" class="btn btn-primary cart-cta">Shop Collection</a>
                 </div>
             </div>
             <button id="theme-toggle" aria-label="Toggle Theme" title="Toggle Theme"><i
@@ -43,180 +51,420 @@
     </nav>
 
     <main>
-        <!-- Service Hero / Overview -->
+        <!-- Shop Hero -->
         <section class="services-hero">
             <div class="container text-center">
-                <h1 class="hero-title animate-zoom">Premium <span>Services</span></h1>
-                <p class="hero-subtitle">Comprehensive sports solutions beyond just equipment.</p>
+                <h1 class="hero-title animate-zoom">Shop Premium <span>Gear</span></h1>
+                <p class="hero-subtitle">Browse curated collections for men, women, and every sport — from indoor training to outdoor adventure.</p>
+                <div class="shop-chips">
+                    <a href="#men" class="chip"><i class="fas fa-male"></i> Men</a>
+                    <a href="#women" class="chip"><i class="fas fa-female"></i> Women</a>
+                    <a href="#equipment" class="chip"><i class="fas fa-dumbbell"></i> Sports Equipment</a>
+                    <a href="#outdoor" class="chip"><i class="fas fa-campground"></i> Outdoor</a>
+                </div>
             </div>
         </section>
 
-        <!-- 1. Sports Equipment -->
-        <section class="section service-row">
+        <!-- 1. Men's Collection -->
+        <section class="section shop-category" id="men">
             <div class="container">
-                <div class="service-flex">
-                    <div class="service-img animate-left">
-                        <img src="https://i.pinimg.com/1200x/39/4a/85/394a8514c21be4c0fc80e3d2a9879019.jpg"
-                            alt="Sports Equipment">
+                <div class="shop-section-header">
+                    <div class="icon-wrap"><i class="fas fa-male"></i></div>
+                    <div>
+                        <h2>Men's Collection</h2>
+                        <p>Performance gear built for serious athletes.</p>
                     </div>
-                    <div class="service-info animate-right">
-                        <div class="icon-wrap"><i class="fas fa-dumbbell"></i></div>
-                        <h2>Premium Sports Equipment</h2>
-                        <p>We source and provide top-tier equipment for all major sports. From professional-grade tennis
-                            rackets to elite football boots, our inventory is curated for excellence.</p>
-                        <ul class="service-features">
-                            <li><i class="fas fa-check"></i> Quality Guaranteed</li>
-                            <li><i class="fas fa-check"></i> Wide Selection</li>
-                            <li><i class="fas fa-check"></i> Global Brands</li>
-                        </ul>
+                </div>
+                <div class="product-grid">
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?q=80&w=500&auto=format&fit=crop" alt="Nike Air ZoomX">
+                            <button class="wishlist-btn" aria-label="Add to Wishlist" title="Add to Wishlist"><i class="far fa-heart"></i></button>
+                            <button class="quick-view-btn">Quick View</button>
+                        </div>
+                        <div class="product-details">
+                            <div class="rating">
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                                <span>(312)</span>
+                            </div>
+                            <h3>Nike Air ZoomX</h3>
+                            <p class="price">$249.99</p>
+                            <div class="product-actions">
+                                <button class="btn btn-primary add-to-cart-btn" data-name="Nike Air ZoomX" data-price="249.99"><i class="fas fa-cart-plus"></i> Add to Cart</button>
+                                <button class="btn btn-outline buy-now-btn" onclick="window.location.href='booking.html'"><i class="fas fa-bolt"></i> Buy Now</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="https://i.pinimg.com/736x/af/c5/27/afc527aa1420c3b0e3957b2b8bf526fc.jpg" alt="Puma Cleats">
+                            <button class="wishlist-btn" aria-label="Add to Wishlist" title="Add to Wishlist"><i class="far fa-heart"></i></button>
+                            <button class="quick-view-btn">Quick View</button>
+                        </div>
+                        <div class="product-details">
+                            <div class="rating">
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                                <span>(124)</span>
+                            </div>
+                            <h3>Puma Future Z Cleats</h3>
+                            <p class="price">$189.99</p>
+                            <div class="product-actions">
+                                <button class="btn btn-primary add-to-cart-btn" data-name="Puma Future Z Cleats" data-price="189.99"><i class="fas fa-cart-plus"></i> Add to Cart</button>
+                                <button class="btn btn-outline buy-now-btn" onclick="window.location.href='booking.html'"><i class="fas fa-bolt"></i> Buy Now</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="https://images.unsplash.com/photo-1579952363873-27f3bade9f55?q=80&w=600&auto=format&fit=crop" alt="Pro Football Kit">
+                            <button class="wishlist-btn" aria-label="Add to Wishlist" title="Add to Wishlist"><i class="far fa-heart"></i></button>
+                            <button class="quick-view-btn">Quick View</button>
+                        </div>
+                        <div class="product-details">
+                            <div class="rating">
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                                <span>(89)</span>
+                            </div>
+                            <h3>Pro Football Kit</h3>
+                            <p class="price">$79.99</p>
+                            <div class="product-actions">
+                                <button class="btn btn-primary add-to-cart-btn" data-name="Pro Football Kit" data-price="79.99"><i class="fas fa-cart-plus"></i> Add to Cart</button>
+                                <button class="btn btn-outline buy-now-btn" onclick="window.location.href='booking.html'"><i class="fas fa-bolt"></i> Buy Now</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="https://i.pinimg.com/736x/0c/8a/49/0c8a499e71dbfedd987e61c09719ba1c.jpg" alt="Tennis Racket">
+                            <button class="wishlist-btn" aria-label="Add to Wishlist" title="Add to Wishlist"><i class="far fa-heart"></i></button>
+                            <button class="quick-view-btn">Quick View</button>
+                        </div>
+                        <div class="product-details">
+                            <div class="rating">
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                                <span>(56)</span>
+                            </div>
+                            <h3>Wilson Pro Staff V13</h3>
+                            <p class="price">$229.99</p>
+                            <div class="product-actions">
+                                <button class="btn btn-primary add-to-cart-btn" data-name="Wilson Pro Staff V13" data-price="229.99"><i class="fas fa-cart-plus"></i> Add to Cart</button>
+                                <button class="btn btn-outline buy-now-btn" onclick="window.location.href='booking.html'"><i class="fas fa-bolt"></i> Buy Now</button>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- 2. Team Kit Printing -->
-        <section class="section service-row bg-alt">
+        <!-- 2. Women's Collection -->
+        <section class="section shop-category bg-alt" id="women">
             <div class="container">
-                <div class="service-flex reverse">
-                    <div class="service-img animate-right">
-                        <img src="https://i.pinimg.com/736x/7d/01/3b/7d013bbbd33de179606baae5d8f829c0.jpg"
-                            alt="Team Kit Printing">
+                <div class="shop-section-header">
+                    <div class="icon-wrap"><i class="fas fa-female"></i></div>
+                    <div>
+                        <h2>Women's Collection</h2>
+                        <p>Lightweight, flexible gear designed for her training journey.</p>
                     </div>
-                    <div class="service-info animate-left">
-                        <div class="icon-wrap"><i class="fas fa-tshirt"></i></div>
-                        <h2>Team Kit Printing</h2>
-                        <p>Customise your team's look with our advanced sublimation and vinyl printing. Perfect for
-                            local clubs and professional academies alike.</p>
-                        <ul class="service-features">
-                            <li><i class="fas fa-check"></i> High-Quality Sublimation</li>
-                            <li><i class="fas fa-check"></i> Custom Names & Numbers</li>
-                            <li><i class="fas fa-check"></i> Logo Embroidery</li>
-                        </ul>
+                </div>
+                <div class="product-grid">
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="https://i.pinimg.com/736x/a8/d7/57/a8d757894d5f4b7c043fd8f72d4d69aa.jpg" alt="Yoga Mat">
+                            <button class="wishlist-btn" aria-label="Add to Wishlist" title="Add to Wishlist"><i class="far fa-heart"></i></button>
+                            <button class="quick-view-btn">Quick View</button>
+                        </div>
+                        <div class="product-details">
+                            <div class="rating">
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                                <span>(210)</span>
+                            </div>
+                            <h3>GripPro Yoga Mat</h3>
+                            <p class="price">$45.00</p>
+                            <div class="product-actions">
+                                <button class="btn btn-primary add-to-cart-btn" data-name="GripPro Yoga Mat" data-price="45.00"><i class="fas fa-cart-plus"></i> Add to Cart</button>
+                                <button class="btn btn-outline buy-now-btn" onclick="window.location.href='booking.html'"><i class="fas fa-bolt"></i> Buy Now</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="https://i.pinimg.com/736x/41/70/8f/41708f2baffdd8210d4fd7a10eaa9a04.jpg" alt="Training Set">
+                            <button class="wishlist-btn" aria-label="Add to Wishlist" title="Add to Wishlist"><i class="far fa-heart"></i></button>
+                            <button class="quick-view-btn">Quick View</button>
+                        </div>
+                        <div class="product-details">
+                            <div class="rating">
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                                <span>(143)</span>
+                            </div>
+                            <h3>Women's Training Set</h3>
+                            <p class="price">$69.99</p>
+                            <div class="product-actions">
+                                <button class="btn btn-primary add-to-cart-btn" data-name="Women's Training Set" data-price="69.99"><i class="fas fa-cart-plus"></i> Add to Cart</button>
+                                <button class="btn btn-outline buy-now-btn" onclick="window.location.href='booking.html'"><i class="fas fa-bolt"></i> Buy Now</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="https://i.pinimg.com/736x/52/e6/83/52e68368252c5e9c4213b61cb264f382.jpg" alt="Resistance Bands">
+                            <button class="wishlist-btn" aria-label="Add to Wishlist" title="Add to Wishlist"><i class="far fa-heart"></i></button>
+                            <button class="quick-view-btn">Quick View</button>
+                        </div>
+                        <div class="product-details">
+                            <div class="rating">
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                                <span>(98)</span>
+                            </div>
+                            <h3>Resistance Band Set</h3>
+                            <p class="price">$24.99</p>
+                            <div class="product-actions">
+                                <button class="btn btn-primary add-to-cart-btn" data-name="Resistance Band Set" data-price="24.99"><i class="fas fa-cart-plus"></i> Add to Cart</button>
+                                <button class="btn btn-outline buy-now-btn" onclick="window.location.href='booking.html'"><i class="fas fa-bolt"></i> Buy Now</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="https://i.pinimg.com/736x/6e/6b/97/6e6b9725912c161c7e64e53dcd492f84.jpg" alt="Cycling Helmet">
+                            <button class="wishlist-btn" aria-label="Add to Wishlist" title="Add to Wishlist"><i class="far fa-heart"></i></button>
+                            <button class="quick-view-btn">Quick View</button>
+                        </div>
+                        <div class="product-details">
+                            <div class="rating">
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i><i class="far fa-star"></i>
+                                <span>(67)</span>
+                            </div>
+                            <h3>Aero Cycling Helmet</h3>
+                            <p class="price">$89.99</p>
+                            <div class="product-actions">
+                                <button class="btn btn-primary add-to-cart-btn" data-name="Aero Cycling Helmet" data-price="89.99"><i class="fas fa-cart-plus"></i> Add to Cart</button>
+                                <button class="btn btn-outline buy-now-btn" onclick="window.location.href='booking.html'"><i class="fas fa-bolt"></i> Buy Now</button>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- 3. Bulk Orders -->
-        <section class="section service-row">
+        <!-- 3. Sports Equipment -->
+        <section class="section shop-category" id="equipment">
             <div class="container">
-                <div class="service-flex">
-                    <div class="service-img animate-left">
-                        <img src="https://i.pinimg.com/736x/5c/3e/a0/5c3ea01e760c03aafee0e78881ad558d.jpg"
-                            alt="Bulk Orders" style="max-height: 350px; width: 100%; object-fit: cover;">
+                <div class="shop-section-header">
+                    <div class="icon-wrap"><i class="fas fa-dumbbell"></i></div>
+                    <div>
+                        <h2>Sports Equipment</h2>
+                        <p>Match-day essentials and training tools for every discipline.</p>
                     </div>
-                    <div class="service-info animate-right">
-                        <div class="icon-wrap"><i class="fas fa-boxes"></i></div>
-                        <h2>Bulk Orders</h2>
-                        <p>Enjoy wholesale pricing and dedicated account managers when you place large orders for
-                            schools, clubs, or retail.</p>
-                        <ul class="service-features">
-                            <li><i class="fas fa-check"></i> Tiered Discounts</li>
-                            <li><i class="fas fa-check"></i> Priority Processing</li>
-                            <li><i class="fas fa-check"></i> Custom Sourcing</li>
-                        </ul>
+                </div>
+                <div class="product-grid">
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="https://i.pinimg.com/736x/6c/d0/ba/6cd0ba7a85d0f0a4bec5bd6c7c50905c.jpg" alt="Surfboard">
+                            <button class="wishlist-btn" aria-label="Add to Wishlist" title="Add to Wishlist"><i class="far fa-heart"></i></button>
+                            <button class="quick-view-btn">Quick View</button>
+                        </div>
+                        <div class="product-details">
+                            <div class="rating">
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                                <span>(89)</span>
+                            </div>
+                            <h3>Pro Wave Surfboard</h3>
+                            <p class="price">$599.00</p>
+                            <div class="product-actions">
+                                <button class="btn btn-primary add-to-cart-btn" data-name="Pro Wave Surfboard" data-price="599.00"><i class="fas fa-cart-plus"></i> Add to Cart</button>
+                                <button class="btn btn-outline buy-now-btn" onclick="window.location.href='booking.html'"><i class="fas fa-bolt"></i> Buy Now</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="https://images.unsplash.com/photo-1531415074968-036ba1b575da?q=80&w=400&auto=format&fit=crop" alt="Cricket Kit">
+                            <button class="wishlist-btn" aria-label="Add to Wishlist" title="Add to Wishlist"><i class="far fa-heart"></i></button>
+                            <button class="quick-view-btn">Quick View</button>
+                        </div>
+                        <div class="product-details">
+                            <div class="rating">
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                                <span>(156)</span>
+                            </div>
+                            <h3>Cricket Bat &amp; Kit</h3>
+                            <p class="price">$129.99</p>
+                            <div class="product-actions">
+                                <button class="btn btn-primary add-to-cart-btn" data-name="Cricket Bat & Kit" data-price="129.99"><i class="fas fa-cart-plus"></i> Add to Cart</button>
+                                <button class="btn btn-outline buy-now-btn" onclick="window.location.href='booking.html'"><i class="fas fa-bolt"></i> Buy Now</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="https://i.pinimg.com/1200x/3c/e6/02/3ce6028fa08c42a7ed942220a7ed8509.jpg" alt="Basketball">
+                            <button class="wishlist-btn" aria-label="Add to Wishlist" title="Add to Wishlist"><i class="far fa-heart"></i></button>
+                            <button class="quick-view-btn">Quick View</button>
+                        </div>
+                        <div class="product-details">
+                            <div class="rating">
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                                <span>(201)</span>
+                            </div>
+                            <h3>Basketball Elite</h3>
+                            <p class="price">$49.99</p>
+                            <div class="product-actions">
+                                <button class="btn btn-primary add-to-cart-btn" data-name="Basketball Elite" data-price="49.99"><i class="fas fa-cart-plus"></i> Add to Cart</button>
+                                <button class="btn btn-outline buy-now-btn" onclick="window.location.href='booking.html'"><i class="fas fa-bolt"></i> Buy Now</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?q=80&w=400&auto=format&fit=crop" alt="Dumbbell Set">
+                            <button class="wishlist-btn" aria-label="Add to Wishlist" title="Add to Wishlist"><i class="far fa-heart"></i></button>
+                            <button class="quick-view-btn">Quick View</button>
+                        </div>
+                        <div class="product-details">
+                            <div class="rating">
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                                <span>(178)</span>
+                            </div>
+                            <h3>Adjustable Dumbbell Set</h3>
+                            <p class="price">$149.99</p>
+                            <div class="product-actions">
+                                <button class="btn btn-primary add-to-cart-btn" data-name="Adjustable Dumbbell Set" data-price="149.99"><i class="fas fa-cart-plus"></i> Add to Cart</button>
+                                <button class="btn btn-outline buy-now-btn" onclick="window.location.href='booking.html'"><i class="fas fa-bolt"></i> Buy Now</button>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- 4. Academy Supply -->
-        <section class="section service-row bg-alt">
+        <!-- 4. Outdoor & Adventure -->
+        <section class="section shop-category bg-alt" id="outdoor">
             <div class="container">
-                <div class="service-flex reverse">
-                    <div class="service-img animate-right">
-                        <img src="https://i.pinimg.com/736x/bc/b0/ee/bcb0ee409d1ae1748a6a6941044b0998.jpg"
-                            alt="Academy Supply" style="max-height: 350px; width: 100%; object-fit: cover;">
+                <div class="shop-section-header">
+                    <div class="icon-wrap"><i class="fas fa-campground"></i></div>
+                    <div>
+                        <h2>Outdoor &amp; Adventure</h2>
+                        <p>Expedition-ready gear for camping, hiking, and extreme conditions.</p>
                     </div>
-                    <div class="service-info animate-left">
-                        <div class="icon-wrap"><i class="fas fa-graduation-cap"></i></div>
-                        <h2>Academy Supply</h2>
-                        <p>End-to-end supply chains for sports academies. We ensure your coaches and students always
-                            have the right training aids.</p>
-                        <ul class="service-features">
-                            <li><i class="fas fa-check"></i> Training Aids</li>
-                            <li><i class="fas fa-check"></i> Monthly Subscriptions</li>
-                            <li><i class="fas fa-check"></i> Coach Discounts</li>
-                        </ul>
+                </div>
+                <div class="product-grid">
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="https://i.pinimg.com/736x/45/35/b5/4535b5757cbe8b783701f7063c78b899.jpg" alt="Camping Tent">
+                            <button class="wishlist-btn" aria-label="Add to Wishlist" title="Add to Wishlist"><i class="far fa-heart"></i></button>
+                            <button class="quick-view-btn">Quick View</button>
+                        </div>
+                        <div class="product-details">
+                            <div class="rating">
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                                <span>(233)</span>
+                            </div>
+                            <h3>Expedition Camping Tent</h3>
+                            <p class="price">$299.99</p>
+                            <div class="product-actions">
+                                <button class="btn btn-primary add-to-cart-btn" data-name="Expedition Camping Tent" data-price="299.99"><i class="fas fa-cart-plus"></i> Add to Cart</button>
+                                <button class="btn btn-outline buy-now-btn" onclick="window.location.href='booking.html'"><i class="fas fa-bolt"></i> Buy Now</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="https://i.pinimg.com/736x/cb/0c/1c/cb0c1c29abdbbde74964c6300a862d3a.jpg" alt="Sleeping Bag">
+                            <button class="wishlist-btn" aria-label="Add to Wishlist" title="Add to Wishlist"><i class="far fa-heart"></i></button>
+                            <button class="quick-view-btn">Quick View</button>
+                        </div>
+                        <div class="product-details">
+                            <div class="rating">
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                                <span>(117)</span>
+                            </div>
+                            <h3>Thermal Sleeping Bag</h3>
+                            <p class="price">$89.99</p>
+                            <div class="product-actions">
+                                <button class="btn btn-primary add-to-cart-btn" data-name="Thermal Sleeping Bag" data-price="89.99"><i class="fas fa-cart-plus"></i> Add to Cart</button>
+                                <button class="btn btn-outline buy-now-btn" onclick="window.location.href='booking.html'"><i class="fas fa-bolt"></i> Buy Now</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="https://i.pinimg.com/736x/97/36/e8/9736e859eaef491951298348f3608ae2.jpg" alt="Snowboard">
+                            <button class="wishlist-btn" aria-label="Add to Wishlist" title="Add to Wishlist"><i class="far fa-heart"></i></button>
+                            <button class="quick-view-btn">Quick View</button>
+                        </div>
+                        <div class="product-details">
+                            <div class="rating">
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                                <span>(92)</span>
+                            </div>
+                            <h3>Winter Snowboard</h3>
+                            <p class="price">$449.99</p>
+                            <div class="product-actions">
+                                <button class="btn btn-primary add-to-cart-btn" data-name="Winter Snowboard" data-price="449.99"><i class="fas fa-cart-plus"></i> Add to Cart</button>
+                                <button class="btn btn-outline buy-now-btn" onclick="window.location.href='booking.html'"><i class="fas fa-bolt"></i> Buy Now</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="https://i.pinimg.com/1200x/63/aa/a0/63aaa0387451a4bb6fda533a6854d9c4.jpg" alt="Surf Gear">
+                            <button class="wishlist-btn" aria-label="Add to Wishlist" title="Add to Wishlist"><i class="far fa-heart"></i></button>
+                            <button class="quick-view-btn">Quick View</button>
+                        </div>
+                        <div class="product-details">
+                            <div class="rating">
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i><i class="far fa-star"></i>
+                                <span>(74)</span>
+                            </div>
+                            <h3>Summer Surf Gear</h3>
+                            <p class="price">$549.99</p>
+                            <div class="product-actions">
+                                <button class="btn btn-primary add-to-cart-btn" data-name="Summer Surf Gear" data-price="549.99"><i class="fas fa-cart-plus"></i> Add to Cart</button>
+                                <button class="btn btn-outline buy-now-btn" onclick="window.location.href='booking.html'"><i class="fas fa-bolt"></i> Buy Now</button>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- 5. Corporate Sports Events -->
-        <section class="section service-row">
-            <div class="container">
-                <div class="service-flex">
-                    <div class="service-img animate-left">
-                        <img src="https://i.pinimg.com/1200x/9a/21/80/9a2180dc75b93abd0a3d8dabeb01e573.jpg"
-                            alt="Corporate Sports Events">
-                    </div>
-                    <div class="service-info animate-right">
-                        <div class="icon-wrap"><i class="fas fa-briefcase"></i></div>
-                        <h2>Corporate Sports Events</h2>
-                        <p>We supply branded equipment and apparel for corporate tournaments, team-building exercises,
-                            and charity runs.</p>
-                        <ul class="service-features">
-                            <li><i class="fas fa-check"></i> Branded Merchandise</li>
-                            <li><i class="fas fa-check"></i> Event Trophies</li>
-                            <li><i class="fas fa-check"></i> On-site Support</li>
-                        </ul>
-                    </div>
+        <!-- 5. Shop CTA -->
+        <section class="shop-cta">
+            <div class="container shop-cta-content">
+                <h2>Can't Find What You're Looking For?</h2>
+                <p>Our experts can source any gear or set up a bulk order for your team.</p>
+                <div class="shop-cta-actions">
+                    <a href="booking.html" class="btn btn-primary btn-large"><i class="fas fa-boxes"></i> Request a Quote</a>
+                    <a href="contact.html" class="btn btn-outline btn-large"><i class="fas fa-calendar-check"></i> Book a Service</a>
                 </div>
             </div>
         </section>
-
-        <!-- 6. Equipment Maintenance -->
-        <section class="section service-row bg-alt">
-            <div class="container">
-                <div class="service-flex reverse">
-                    <div class="service-img animate-right">
-                        <img src="https://i.pinimg.com/1200x/34/aa/86/34aa86cfc0c5bc7e6c02854cbef61f50.jpg"
-                            alt="Equipment Maintenance">
-                    </div>
-                    <div class="service-info animate-left">
-                        <div class="icon-wrap"><i class="fas fa-tools"></i></div>
-                        <h2>Equipment Maintenance</h2>
-                        <p>Prolong the life of your gear. From racket restringing to treadmill calibration, our expert
-                            technicians have you covered.</p>
-                        <ul class="service-features">
-                            <li><i class="fas fa-check"></i> Racket Restringing</li>
-                            <li><i class="fas fa-check"></i> Fitness Machine Servicing</li>
-                            <li><i class="fas fa-check"></i> Protective Gear Repair</li>
-                        </ul>
+        <!-- Quick View Modal -->
+        <div id="quickViewModal" class="modal">
+            <div class="modal-content">
+                <span class="close-modal">&times;</span>
+                <div class="modal-body">
+                    <img id="qv-img" src="" alt="Product">
+                    <div class="qv-info">
+                        <h3 id="qv-title">Title</h3>
+                        <div id="qv-rating" class="rating"></div>
+                        <p id="qv-price" class="price">$0.00</p>
+                        <p class="qv-desc">Premium quality sports equipment designed to elevate your performance. Crafted with precision for durability and maximum comfort.</p>
+                        <div class="modal-actions">
+                            <button class="btn btn-primary add-to-cart-btn" id="qv-add-to-cart"><i class="fas fa-cart-plus"></i> Add to Cart</button>
+                            <button class="btn btn-outline" onclick="window.location.href='booking.html'"><i class="fas fa-bolt"></i> Buy Now</button>
+                        </div>
                     </div>
                 </div>
             </div>
-        </section>
-
-        <!-- 7. Delivery & Installation -->
-        <section class="section service-row">
-            <div class="container">
-                <div class="service-flex">
-                    <div class="service-img animate-left">
-                        <img src="https://images.unsplash.com/photo-1580674285054-bed31e145f59?q=80&w=800&auto=format&fit=crop"
-                            alt="Delivery & Installation">
-                    </div>
-                    <div class="service-info animate-right">
-                        <div class="icon-wrap"><i class="fas fa-truck-loading"></i></div>
-                        <h2>Delivery & Installation</h2>
-                        <p>Heavy fitness equipment requires precise setup. Our team ensures safe delivery and
-                            professional installation at your location.</p>
-                        <ul class="service-features">
-                            <li><i class="fas fa-check"></i> White-glove Delivery</li>
-                            <li><i class="fas fa-check"></i> Professional Assembly</li>
-                            <li><i class="fas fa-check"></i> Safety Testing</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </section>
+        </div>
     </main>
 
     <footer class="professional-footer">
         <div class="container footer-grid">
             <div class="footer-col brand-col">
-                <a href="../index.html" class="footer-logo">Sportivo</a>
+                <a href="../index.html" class="footer-logo"><img src="../favicon.svg" alt="Sportivo Logo" class="footer-logo-img"> Sportivo</a>
                 <p>Empowering athletes with premium gear, innovative technology, and uncompromising quality for every
                     challenge.</p>
                 <div class="footer-socials">

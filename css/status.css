@@ -16,6 +16,14 @@
     box-shadow: var(--shadow-lg);
     border: 1px solid var(--border-color);
 }
+.status-logo {
+    width: 64px;
+    height: 64px;
+    border-radius: 14px;
+    margin: 0 auto 1.5rem auto;
+    display: block;
+    box-shadow: 0 8px 20px rgba(249, 115, 22, 0.25);
+}
 .status-icon {
     font-size: 5rem;
     color: var(--primary-color);
@@ -66,6 +74,25 @@
     .notify-wrapper { flex-direction: column; }
     .countdown { flex-wrap: wrap; }
     .error-actions { flex-direction: column; }
+}
+@media(max-width: 425px) {
+    .status-body { padding: 1rem; }
+    .status-container { padding: 2rem 1.5rem; }
+    .status-container h1 { font-size: 2rem; }
+    .status-container p { font-size: 1rem; }
+    .error-code { font-size: 4.5rem !important; }
+    .time-box { min-width: 60px; padding: 0.75rem; }
+    .time-box span { font-size: 1.5rem; }
+    .notify-wrapper input { padding: 0.8rem; font-size: 0.9rem; }
+}
+@media(max-width: 360px) {
+    .status-container { padding: 1.75rem 1.25rem; }
+    .error-code { font-size: 3.75rem !important; }
+    .countdown { gap: 0.5rem; }
+    .time-box { min-width: 0; flex: 1; padding: 0.6rem 0.4rem; }
+    .notify-btn { white-space: normal; }
+    .status-controls { top: 1rem; right: 1rem; }
+    [dir="rtl"] .status-controls { right: auto; left: 1rem; }
 }
 
 /* Floating Status Toggles */

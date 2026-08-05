@@ -7,28 +7,38 @@
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/home2.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<link rel="icon" type="image/svg+xml" href="../favicon.svg">
 </head>
 <body>
     <nav class="navbar">
         <a href="../index.html" class="logo-container">
-            <span class="logo">Sportivo</span>
-            <span class="logo-tagline">Elite Sports Gear</span>
+            <img src="../favicon.svg" alt="Sportivo Logo" class="logo-img">
+            <span class="logo-text">
+                <span class="logo">Sportivo</span>
+                <span class="logo-tagline">Elite Sports Gear</span>
+            </span>
         </a>
         <ul class="nav-links" id="nav-links">
             <li><a href="../index.html">Home</a></li>
             <li><a href="home2.html">Home 2</a></li>
             <li><a href="about.html">About</a></li>
-            <li><a href="services.html">Services</a></li>
+            <li><a href="services.html">Shop</a></li>
             <li><a href="gallery.html">Gallery</a></li>
             <li><a href="blog.html">Blog</a></li>
             <li><a href="contact.html">Contact</a></li>
         </ul>
         <div class="nav-icons">
-            <div class="user-dropdown">
-                <button id="user-toggle" aria-label="User Profile" title="Account"><i class="fas fa-user"></i></button>
-                <div class="user-dropdown-menu" id="user-dropdown-menu">
-                    <a href="login.html"><i class="fas fa-sign-in-alt"></i> Login</a>
-                    <a href="signup.html"><i class="fas fa-user-plus"></i> Sign Up</a>
+            <a href="contact.html" class="btn btn-primary nav-book-cta"><i class="fas fa-calendar-check"></i> Book a Service</a>
+            <div class="cart-dropdown">
+                <button id="cart-toggle" aria-label="Shopping Cart" title="Cart"><i class="fas fa-shopping-cart"></i><span class="cart-badge" id="cart-count">0</span></button>
+                <div class="cart-dropdown-menu" id="cart-dropdown-menu">
+                    <p class="cart-empty" id="cart-empty"><i class="fas fa-shopping-cart"></i> Your cart is empty</p>
+                    <div class="cart-items" id="cart-items"></div>
+                    <div class="cart-footer" id="cart-footer" style="display: none;">
+                        <div class="cart-total"><span>Total</span><strong id="cart-total-price">$0.00</strong></div>
+                        <a href="booking.html" class="btn btn-primary cart-checkout"><i class="fas fa-bolt"></i> Buy Now</a>
+                    </div>
+                    <a href="booking.html" class="btn btn-primary cart-cta">Shop Collection</a>
                 </div>
             </div>
             <button id="theme-toggle" aria-label="Toggle Theme" title="Toggle Theme"><i class="fas fa-moon"></i></button>
@@ -38,11 +48,40 @@
     </nav>
 
     <main>
-        <!-- Section 1: Professional Sports Collections (Masonry Layout) -->
-        <section class="section pro-collections">
+        <!-- Section 1: Hero -->
+        <section class="hero2">
+            <div class="hero2-bg"></div>
+            <div class="container hero2-content">
+                <div class="hero2-text">
+                    <span class="hero2-badge"><i class="fas fa-fire"></i> New Season Collection</span>
+                    <h1>Gear Up. <span>Dominate</span> Every Game.</h1>
+                    <p>From pro-grade rackets to expedition-ready camping gear — shop the collections trusted by athletes worldwide.</p>
+                    <div class="hero2-actions">
+                        <a href="booking.html" class="btn btn-primary btn-large"><i class="fas fa-shopping-bag"></i> Shop Collection</a>
+                        <a href="#collections" class="btn btn-outline btn-large"><i class="fas fa-th-large"></i> Browse Categories</a>
+                    </div>
+                    <div class="hero2-stats">
+                        <div class="stat"><strong>10K+</strong><span>Products</span></div>
+                        <div class="stat"><strong>4.9&#9733;</strong><span>Avg. Rating</span></div>
+                        <div class="stat"><strong>40+</strong><span>Global Brands</span></div>
+                        <div class="stat"><strong>24/7</strong><span>Support</span></div>
+                    </div>
+                </div>
+                <div class="hero2-media">
+                    <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?q=80&w=800&auto=format&fit=crop" alt="Premium Sports Gear">
+                    <div class="hero2-floating-card glass-panel">
+                        <i class="fas fa-truck-fast"></i>
+                        <div><strong>Free Shipping</strong><span>On orders over $99</span></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 2: Shop by Category (Masonry Layout) -->
+        <section class="section pro-collections" id="collections">
             <div class="container">
                 <div class="section-header">
-                    <h2 class="section-title">Professional Collections</h2>
+                    <h2 class="section-title">Shop by Category</h2>
                     <p>Elite gear curated for peak performance.</p>
                 </div>
                 <div class="masonry-grid">
@@ -68,7 +107,98 @@
             </div>
         </section>
 
-        <!-- Section 2: Outdoor Adventure Equipment (Overlapping Floating Box) -->
+        <!-- Section 3: Bestsellers -->
+        <section class="section bestsellers">
+            <div class="container">
+                <div class="section-header bestsellers-header">
+                    <div>
+                        <h2 class="section-title">Bestsellers</h2>
+                        <p>Top-rated gear our customers love.</p>
+                    </div>
+                    <a href="booking.html" class="btn-link view-all">View All Products <i class="fas fa-arrow-right"></i></a>
+                </div>
+                <div class="product-grid">
+                    <!-- Product 1 -->
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?q=80&w=500&auto=format&fit=crop" alt="Nike Air ZoomX">
+                            <button class="wishlist-btn" aria-label="Add to Wishlist" title="Add to Wishlist"><i class="far fa-heart"></i></button>
+                        </div>
+                        <div class="product-details">
+                            <div class="rating">
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                                <span>(312)</span>
+                            </div>
+                            <h3>Nike Air ZoomX</h3>
+                            <p class="price">$249.99</p>
+                            <div class="product-actions">
+                                <button class="btn btn-primary add-to-cart-btn" data-name="Nike Air ZoomX" data-price="249.99"><i class="fas fa-cart-plus"></i> Add to Cart</button>
+                                <button class="btn btn-outline buy-now-btn" onclick="window.location.href='booking.html'"><i class="fas fa-bolt"></i> Buy Now</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Product 2 -->
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="https://i.pinimg.com/736x/af/c5/27/afc527aa1420c3b0e3957b2b8bf526fc.jpg" alt="Puma Cleats">
+                            <button class="wishlist-btn" aria-label="Add to Wishlist" title="Add to Wishlist"><i class="far fa-heart"></i></button>
+                        </div>
+                        <div class="product-details">
+                            <div class="rating">
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                                <span>(124)</span>
+                            </div>
+                            <h3>Puma Future Z Cleats</h3>
+                            <p class="price">$189.99</p>
+                            <div class="product-actions">
+                                <button class="btn btn-primary add-to-cart-btn" data-name="Puma Future Z Cleats" data-price="189.99"><i class="fas fa-cart-plus"></i> Add to Cart</button>
+                                <button class="btn btn-outline buy-now-btn" onclick="window.location.href='booking.html'"><i class="fas fa-bolt"></i> Buy Now</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Product 3 -->
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="https://i.pinimg.com/736x/a8/d7/57/a8d757894d5f4b7c043fd8f72d4d69aa.jpg" alt="Yoga Mat">
+                            <button class="wishlist-btn" aria-label="Add to Wishlist" title="Add to Wishlist"><i class="far fa-heart"></i></button>
+                        </div>
+                        <div class="product-details">
+                            <div class="rating">
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                                <span>(210)</span>
+                            </div>
+                            <h3>GripPro Yoga Mat</h3>
+                            <p class="price">$45.00</p>
+                            <div class="product-actions">
+                                <button class="btn btn-primary add-to-cart-btn" data-name="GripPro Yoga Mat" data-price="45.00"><i class="fas fa-cart-plus"></i> Add to Cart</button>
+                                <button class="btn btn-outline buy-now-btn" onclick="window.location.href='booking.html'"><i class="fas fa-bolt"></i> Buy Now</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Product 4 -->
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="https://i.pinimg.com/736x/0c/8a/49/0c8a499e71dbfedd987e61c09719ba1c.jpg" alt="Tennis Racket">
+                            <button class="wishlist-btn" aria-label="Add to Wishlist" title="Add to Wishlist"><i class="far fa-heart"></i></button>
+                        </div>
+                        <div class="product-details">
+                            <div class="rating">
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                                <span>(56)</span>
+                            </div>
+                            <h3>Wilson Pro Staff V13</h3>
+                            <p class="price">$229.99</p>
+                            <div class="product-actions">
+                                <button class="btn btn-primary add-to-cart-btn" data-name="Wilson Pro Staff V13" data-price="229.99"><i class="fas fa-cart-plus"></i> Add to Cart</button>
+                                <button class="btn btn-outline buy-now-btn" onclick="window.location.href='booking.html'"><i class="fas fa-bolt"></i> Buy Now</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 4: Outdoor Adventure Equipment (Overlapping Floating Box) -->
         <section class="section outdoor-adventure">
             <div class="container">
                 <div class="outdoor-wrapper">
@@ -83,13 +213,13 @@
                             <li><i class="fas fa-check"></i> Thermal Sleeping Bags</li>
                             <li><i class="fas fa-check"></i> Tactical Backpacks</li>
                         </ul>
-                        <a href="gallery.html" class="btn btn-primary">Explore Outdoors</a>
+                        <a href="booking.html" class="btn btn-primary">Shop Outdoor Gear</a>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Section 3: Cycling Essentials (Elevated Center Card) -->
+        <!-- Section 5: Cycling Essentials (Elevated Center Card) -->
         <section class="section cycling-essentials">
             <div class="container">
                 <h2 class="section-title text-center">Cycling Essentials</h2>
@@ -99,6 +229,7 @@
                         <div class="cycle-info">
                             <h3>Aero Helmets</h3>
                             <p>Maximum protection with minimal drag.</p>
+                            <a href="booking.html" class="btn-link cycle-shop">Shop Helmets <i class="fas fa-arrow-right"></i></a>
                         </div>
                     </div>
                     <div class="cycle-card featured-cycle">
@@ -106,7 +237,7 @@
                         <div class="cycle-info">
                             <h3>Pro Road Bikes</h3>
                             <p>Carbon fiber frames engineered for speed.</p>
-                            <a href="gallery.html" class="btn btn-primary">View Models</a>
+                            <a href="booking.html" class="btn btn-primary">Shop Bikes</a>
                         </div>
                     </div>
                     <div class="cycle-card">
@@ -114,18 +245,22 @@
                         <div class="cycle-info">
                             <h3>Accessories</h3>
                             <p>Everything from bottles to speedometers.</p>
+                            <a href="booking.html" class="btn-link cycle-shop">Shop Accessories <i class="fas fa-arrow-right"></i></a>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Section 4: Fitness Equipment Showcase (Center Stage Layout) -->
+        <!-- Section 6: Fitness Equipment Showcase (Center Stage Layout) -->
         <section class="section fitness-showcase">
             <div class="container">
                 <div class="showcase-header">
                     <h2>Home Fitness Setup</h2>
                     <p>Build your ultimate home gym.</p>
+                </div>
+                <div class="showcase-actions">
+                    <a href="booking.html" class="btn btn-primary"><i class="fas fa-dumbbell"></i> Shop Fitness Gear</a>
                 </div>
                 <div class="showcase-grid">
                     <div class="showcase-features left">
@@ -151,58 +286,6 @@
                             <h4>Yoga Mats</h4>
                             <p>Non-slip surfaces for stable poses.</p>
                         </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Section 5: Sports Buying Guide (List & Image Layout) -->
-        <section class="section buying-guide">
-            <div class="container">
-                <div class="guide-wrapper">
-                    <div class="guide-content">
-                        <h2 class="section-title">Sports Buying Guide</h2>
-                        <div class="guide-list accordion-list">
-                            <div class="guide-item accordion-item">
-                                <div class="guide-header">
-                                    <div class="guide-icon"><i class="fas fa-shoe-prints"></i></div>
-                                    <div class="guide-text">
-                                        <h3>How to Choose Running Shoes</h3>
-                                    </div>
-                                    <i class="fas fa-chevron-down arrow"></i>
-                                </div>
-                                <div class="guide-content-dropdown">
-                                    <p>Find the perfect fit for your gait and terrain. Consider cushioning, heel drop, and pronation support to maximize your running efficiency and prevent injuries.</p>
-                                </div>
-                            </div>
-                            <div class="guide-item accordion-item">
-                                <div class="guide-header">
-                                    <div class="guide-icon"><i class="fas fa-table-tennis"></i></div>
-                                    <div class="guide-text">
-                                        <h3>Racket Selection Guide</h3>
-                                    </div>
-                                    <i class="fas fa-chevron-down arrow"></i>
-                                </div>
-                                <div class="guide-content-dropdown">
-                                    <p>Understand grip size, weight, and string tension. Heavier rackets provide more power, while lighter ones offer better maneuverability and control.</p>
-                                </div>
-                            </div>
-                            <div class="guide-item accordion-item">
-                                <div class="guide-header">
-                                    <div class="guide-icon"><i class="fas fa-campground"></i></div>
-                                    <div class="guide-text">
-                                        <h3>Tent Sizing & Materials</h3>
-                                    </div>
-                                    <i class="fas fa-chevron-down arrow"></i>
-                                </div>
-                                <div class="guide-content-dropdown">
-                                    <p>What you need to know before your camping trip. Pay close attention to the hydrostatic head rating for waterproofing and the denier of the fabric for durability.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="guide-image">
-                        <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?q=80&w=600&auto=format&fit=crop" alt="Buying Guide">
                     </div>
                 </div>
             </div>
@@ -265,7 +348,74 @@
                     <h3>Summer Surf</h3>
                     <h2>New Arrivals</h2>
                     <p>Surfboards, swimwear, and beach gear.</p>
-                    <a href="booking.html" class="btn btn-outline" style="border-color: #FFF; color: #FFF;">Shop Summer</a>
+                    <a href="booking.html" class="btn btn-outline">Shop Summer</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 8: Sports Buying Guide -->
+        <section class="section buying-guide">
+            <div class="container">
+                <div class="guide-wrapper">
+                    <div class="guide-content">
+                        <h2 class="section-title">Need Help Choosing?</h2>
+                        <p style="color: var(--text-light); margin-bottom: 2rem; max-width: 500px;">Browse our quick guides to pick the right gear with confidence — then add it straight to your cart.</p>
+                        <div class="guide-list accordion-list">
+                            <div class="guide-item accordion-item">
+                                <div class="guide-header">
+                                    <div class="guide-icon"><i class="fas fa-shoe-prints"></i></div>
+                                    <div class="guide-text">
+                                        <h3>How to Choose Running Shoes</h3>
+                                    </div>
+                                    <i class="fas fa-chevron-down arrow"></i>
+                                </div>
+                                <div class="guide-content-dropdown">
+                                    <p>Find the perfect fit for your gait and terrain. Consider cushioning, heel drop, and pronation support to maximize your running efficiency and prevent injuries.</p>
+                                </div>
+                            </div>
+                            <div class="guide-item accordion-item">
+                                <div class="guide-header">
+                                    <div class="guide-icon"><i class="fas fa-table-tennis"></i></div>
+                                    <div class="guide-text">
+                                        <h3>Racket Selection Guide</h3>
+                                    </div>
+                                    <i class="fas fa-chevron-down arrow"></i>
+                                </div>
+                                <div class="guide-content-dropdown">
+                                    <p>Understand grip size, weight, and string tension. Heavier rackets provide more power, while lighter ones offer better maneuverability and control.</p>
+                                </div>
+                            </div>
+                            <div class="guide-item accordion-item">
+                                <div class="guide-header">
+                                    <div class="guide-icon"><i class="fas fa-campground"></i></div>
+                                    <div class="guide-text">
+                                        <h3>Tent Sizing & Materials</h3>
+                                    </div>
+                                    <i class="fas fa-chevron-down arrow"></i>
+                                </div>
+                                <div class="guide-content-dropdown">
+                                    <p>What you need to know before your camping trip. Pay close attention to the hydrostatic head rating for waterproofing and the denier of the fabric for durability.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="booking.html" class="btn btn-primary" style="margin-top: 2rem;"><i class="fas fa-shopping-bag"></i> Shop All Products</a>
+                    </div>
+                    <div class="guide-image">
+                        <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?q=80&w=600&auto=format&fit=crop" alt="Buying Guide">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 9: Final CTA -->
+        <section class="final-cta">
+            <div class="final-cta-bg"></div>
+            <div class="container final-cta-content">
+                <h2>Ready to Elevate Your Game?</h2>
+                <p>Join thousands of athletes shopping premium gear at Sportivo. Free shipping on orders over $99.</p>
+                <div class="final-cta-actions">
+                    <a href="booking.html" class="btn btn-primary btn-large"><i class="fas fa-shopping-bag"></i> Shop Collection</a>
+                    <a href="contact.html" class="btn btn-outline btn-large"><i class="fas fa-calendar-check"></i> Book a Service</a>
                 </div>
             </div>
         </section>
@@ -274,7 +424,7 @@
     <footer class="professional-footer">
         <div class="container footer-grid">
             <div class="footer-col brand-col">
-                <a href="../index.html" class="footer-logo">Sportivo</a>
+                <a href="../index.html" class="footer-logo"><img src="../favicon.svg" alt="Sportivo Logo" class="footer-logo-img"> Sportivo</a>
                 <p>Empowering athletes with premium gear, innovative technology, and uncompromising quality for every challenge.</p>
                 <div class="footer-socials">
                     <a href="https://facebook.com/sportivo" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook-f"></i></a>

@@ -48,6 +48,104 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
+  // Cart Dropdown Toggle
+  const cartToggle = document.getElementById('cart-toggle');
+  const cartDropdownMenu = document.getElementById('cart-dropdown-menu');
+
+  if (cartToggle && cartDropdownMenu) {
+    cartToggle.addEventListener('click', (e) => {
+      e.stopPropagation();
+      cartDropdownMenu.classList.toggle('show');
+    });
+
+    document.addEventListener('click', (e) => {
+      if (!cartDropdownMenu.contains(e.target) && !cartToggle.contains(e.target)) {
+        cartDropdownMenu.classList.remove('show');
+      }
+    });
+  }
+
+  // Wishlist Toggle
+  document.querySelectorAll('.wishlist-btn').forEach((btn) => {
+    btn.addEventListener('click', () => {
+      btn.classList.toggle('active');
+      const icon = btn.querySelector('i');
+      if (icon) {
+        icon.classList.toggle('fas', btn.classList.contains('active'));
+        icon.classList.toggle('far', !btn.classList.contains('active'));
+      }
+    });
+  });
+
+  // Add to Cart
+  const cartCount = document.getElementById('cart-count');
+  const cartEmpty = document.getElementById('cart-empty');
+  const cartItems = document.getElementById('cart-items');
+  const cartFooter = document.getElementById('cart-footer');
+  const cartTotalPrice = document.getElementById('cart-total-price');
+  const cartItemsList = [];
+
+  function updateCart() {
+    const hasItems = cartItemsList.length > 0;
+    if (cartEmpty) cartEmpty.style.display = hasItems ? 'none' : 'flex';
+    if (cartFooter) cartFooter.style.display = hasItems ? 'flex' : 'none';
+    if (cartCount) cartCount.textContent = cartItemsList.length;
+    if (cartItems) {
+      cartItems.innerHTML = '';
+      cartItemsList.forEach((item, idx) => {
+        const el = document.createElement('div');
+        el.className = 'cart-item';
+
+        const info = document.createElement('div');
+        info.className = 'cart-item-info';
+
+        const nameEl = document.createElement('span');
+        nameEl.className = 'cart-item-name';
+        nameEl.textContent = item.name;
+
+        const priceEl = document.createElement('span');
+        priceEl.className = 'cart-item-price';
+        priceEl.textContent = '$' + item.price.toFixed(2);
+
+        const removeBtn = document.createElement('button');
+        removeBtn.className = 'cart-item-remove';
+        removeBtn.setAttribute('aria-label', 'Remove ' + item.name);
+        removeBtn.title = 'Remove from Cart';
+        removeBtn.innerHTML = '<i class="fas fa-times"></i>';
+        removeBtn.addEventListener('click', () => {
+          cartItemsList.splice(idx, 1);
+          updateCart();
+        });
+
+        info.appendChild(nameEl);
+        info.appendChild(priceEl);
+        el.appendChild(info);
+        el.appendChild(removeBtn);
+        cartItems.appendChild(el);
+      });
+    }
+    const total = cartItemsList.reduce((sum, item) => sum + item.price, 0);
+    if (cartTotalPrice) cartTotalPrice.textContent = '$' + total.toFixed(2);
+  }
+
+  function addToCart(button) {
+    const name = button.dataset.name || 'Product';
+    const price = parseFloat(button.dataset.price) || 0;
+    cartItemsList.push({ name, price });
+    updateCart();
+    button.classList.add('added');
+    const label = button.innerHTML;
+    button.innerHTML = '<i class="fas fa-check"></i> Added';
+    setTimeout(() => {
+      button.classList.remove('added');
+      button.innerHTML = label;
+    }, 1500);
+  }
+
+  document.querySelectorAll('.add-to-cart-btn').forEach((btn) => {
+    btn.addEventListener('click', () => addToCart(btn));
+  });
+
   // Mobile Menu
   const mobileMenuBtn = document.getElementById('mobile-menu-btn');
   const navLinks = document.getElementById('nav-links');
@@ -96,7 +194,6 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   // Quick View Modal Logic
-  const quickViewBtns = document.querySelectorAll('.quick-view-btn');
   const modal = document.getElementById('quickViewModal');
   
   if (modal) {
@@ -118,27 +215,44 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // Open modal and populate data
-    quickViewBtns.forEach(btn => {
+    const openQuickView = (card) => {
+      if (!card) return;
+
+      // Extract data
+      const imgSrc = card.querySelector('img').src;
+      const title = card.querySelector('h3').innerText;
+      const price = card.querySelector('.price').innerText;
+      const ratingHTML = card.querySelector('.rating').innerHTML;
+      
+      // Populate modal
+      document.getElementById('qv-img').src = imgSrc;
+      document.getElementById('qv-title').innerText = title;
+      document.getElementById('qv-price').innerText = price;
+      document.getElementById('qv-rating').innerHTML = ratingHTML;
+
+      const qvAddBtn = document.getElementById('qv-add-to-cart');
+      if (qvAddBtn) {
+        qvAddBtn.dataset.name = title;
+        qvAddBtn.dataset.price = price.replace(/[^0-9.]/g, '');
+      }
+      
+      // Show modal
+      modal.classList.add('show');
+      document.body.classList.add('no-scroll');
+    };
+
+    document.querySelectorAll('.quick-view-btn').forEach(btn => {
       btn.addEventListener('click', (e) => {
         e.preventDefault();
-        const card = btn.closest('.product-card');
-        if (!card) return;
-        
-        // Extract data
-        const imgSrc = card.querySelector('img').src;
-        const title = card.querySelector('h3').innerText;
-        const price = card.querySelector('.price').innerText;
-        const ratingHTML = card.querySelector('.rating').innerHTML;
-        
-        // Populate modal
-        document.getElementById('qv-img').src = imgSrc;
-        document.getElementById('qv-title').innerText = title;
-        document.getElementById('qv-price').innerText = price;
-        document.getElementById('qv-rating').innerHTML = ratingHTML;
-        
-        // Show modal
-        modal.classList.add('show');
-        document.body.classList.add('no-scroll');
+        e.stopPropagation();
+        openQuickView(btn.closest('.product-card'));
+      });
+    });
+
+    document.querySelectorAll('.product-card').forEach(card => {
+      card.addEventListener('click', (e) => {
+        if (e.target.closest('.wishlist-btn, .add-to-cart-btn, .buy-now-btn, .quick-view-btn, a')) return;
+        openQuickView(card);
       });
     });
   }

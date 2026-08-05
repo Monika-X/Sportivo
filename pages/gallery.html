@@ -4,9 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sportivo - Gallery</title>
+    <title>Sportivo - Gear Gallery</title>
     <link rel="stylesheet" href="../css/style.css">
-    <link rel="stylesheet" href="../css/gallery.css?v=2">
+    <link rel="stylesheet" href="../css/gallery.css?v=3">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 <link rel="icon" type="image/svg+xml" href="../favicon.svg">
 </head>
@@ -14,25 +14,33 @@
 <body>
     <nav class="navbar">
         <a href="../index.html" class="logo-container">
-            <span class="logo">Sportivo</span>
-            <span class="logo-tagline">Elite Sports Gear</span>
+            <img src="../favicon.svg" alt="Sportivo Logo" class="logo-img">
+            <span class="logo-text">
+                <span class="logo">Sportivo</span>
+                <span class="logo-tagline">Elite Sports Gear</span>
+            </span>
         </a>
         <ul class="nav-links" id="nav-links">
             <li><a href="../index.html">Home</a></li>
-                    <li><a href="home2.html">Home 2</a></li>
             <li><a href="home2.html">Home 2</a></li>
             <li><a href="about.html">About</a></li>
-            <li><a href="services.html">Services</a></li>
+            <li><a href="services.html">Shop</a></li>
             <li><a href="gallery.html">Gallery</a></li>
             <li><a href="blog.html">Blog</a></li>
             <li><a href="contact.html">Contact</a></li>
         </ul>
         <div class="nav-icons">
-            <div class="user-dropdown">
-                <button id="user-toggle" aria-label="User Profile" title="Account"><i class="fas fa-user"></i></button>
-                <div class="user-dropdown-menu" id="user-dropdown-menu">
-                    <a href="login.html"><i class="fas fa-sign-in-alt"></i> Login</a>
-                    <a href="signup.html"><i class="fas fa-user-plus"></i> Sign Up</a>
+            <a href="contact.html" class="btn btn-primary nav-book-cta"><i class="fas fa-calendar-check"></i> Book a Service</a>
+            <div class="cart-dropdown">
+                <button id="cart-toggle" aria-label="Shopping Cart" title="Cart"><i class="fas fa-shopping-cart"></i><span class="cart-badge" id="cart-count">0</span></button>
+                <div class="cart-dropdown-menu" id="cart-dropdown-menu">
+                    <p class="cart-empty" id="cart-empty"><i class="fas fa-shopping-cart"></i> Your cart is empty</p>
+                    <div class="cart-items" id="cart-items"></div>
+                    <div class="cart-footer" id="cart-footer" style="display: none;">
+                        <div class="cart-total"><span>Total</span><strong id="cart-total-price">$0.00</strong></div>
+                        <a href="booking.html" class="btn btn-primary cart-checkout"><i class="fas fa-bolt"></i> Buy Now</a>
+                    </div>
+                    <a href="booking.html" class="btn btn-primary cart-cta">Shop Collection</a>
                 </div>
             </div>
             <button id="theme-toggle" aria-label="Toggle Theme" title="Toggle Theme"><i
@@ -46,8 +54,16 @@
         <!-- 1. Hero -->
         <section class="gallery-hero">
             <div class="container text-center">
-                <h1 class="hero-title animate-zoom">Our <span>Gallery</span></h1>
-                <p class="hero-subtitle">Immerse yourself in the world of premium sports.</p>
+                <p class="hero-badge">Premium Sports &amp; Outdoor Equipment</p>
+                <h1 class="hero-title animate-zoom">Gear <span>Showroom</span></h1>
+                <p class="hero-subtitle">See our top-selling sports equipment and outdoor gear up close — hover over any
+                    product to add it straight to your cart.</p>
+                <div class="hero-actions gallery-hero-actions">
+                    <a href="services.html" class="btn btn-primary btn-large"><i class="fas fa-store"></i> Shop the
+                        Collection</a>
+                    <a href="booking.html" class="btn btn-outline btn-large"><i class="fas fa-boxes"></i> Request a
+                        Quote</a>
+                </div>
             </div>
         </section>
 
@@ -64,82 +80,196 @@
             </div>
         </section>
 
-        <!-- 3. Sports Equipment -->
+        <!-- 3. Explore by Category -->
+        <section class="section explore-categories">
+            <div class="container">
+                <h2 class="section-title">Explore by Category</h2>
+                <div class="category-cards">
+                    <a href="services.html#equipment" class="category-card" style="background-image: url('https://images.unsplash.com/photo-1546519638-68e109498ffc?q=80&w=900&auto=format&fit=crop')">
+                        <div class="cat-content">
+                            <i class="fas fa-dumbbell"></i>
+                            <h3>Sports Equipment</h3>
+                            <span>Court, Pitch &amp; Field</span>
+                            <p class="cat-shop">Shop Now <i class="fas fa-arrow-right"></i></p>
+                        </div>
+                    </a>
+                    <a href="services.html#outdoor" class="category-card" style="background-image: url('https://images.unsplash.com/photo-1478131143081-80f7f84ca84d?q=80&w=900&auto=format&fit=crop')">
+                        <div class="cat-content">
+                            <i class="fas fa-campground"></i>
+                            <h3>Outdoor &amp; Adventure</h3>
+                            <span>Tents, Surf &amp; Snow</span>
+                            <p class="cat-shop">Shop Now <i class="fas fa-arrow-right"></i></p>
+                        </div>
+                    </a>
+                    <a href="services.html#equipment" class="category-card" style="background-image: url('https://images.unsplash.com/photo-1485965120184-e220f721d03e?q=80&w=900&auto=format&fit=crop')">
+                        <div class="cat-content">
+                            <i class="fas fa-bicycle"></i>
+                            <h3>Cycling</h3>
+                            <span>Bikes &amp; Essentials</span>
+                            <p class="cat-shop">Shop Now <i class="fas fa-arrow-right"></i></p>
+                        </div>
+                    </a>
+                    <a href="services.html#equipment" class="category-card" style="background-image: url('https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?q=80&w=900&auto=format&fit=crop')">
+                        <div class="cat-content">
+                            <i class="fas fa-heartbeat"></i>
+                            <h3>Fitness &amp; Training</h3>
+                            <span>Gym &amp; Recovery</span>
+                            <p class="cat-shop">Shop Now <i class="fas fa-arrow-right"></i></p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. Product Spotlight -->
+        <section class="spotlight">
+            <div class="container spotlight-wrap">
+                <div class="spotlight-img">
+                    <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?q=80&w=900&auto=format&fit=crop" alt="Nike Air ZoomX">
+                </div>
+                <div class="spotlight-info">
+                    <span class="hero-badge">Product Spotlight</span>
+                    <h2>Nike Air ZoomX</h2>
+                    <div class="rating">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        <span>(312)</span>
+                    </div>
+                    <p class="price">$249.99</p>
+                    <p class="spotlight-desc">Our best-selling race-day shoe, built for record-breaking speed and all-day comfort.</p>
+                    <ul class="spotlight-features">
+                        <li><i class="fas fa-check"></i> ZoomX foam for explosive energy return</li>
+                        <li><i class="fas fa-check"></i> Lightweight, breathable Flyknit upper</li>
+                        <li><i class="fas fa-check"></i> Carbon-fiber plate for maximum propulsion</li>
+                    </ul>
+                    <div class="spotlight-actions">
+                        <button class="btn btn-primary add-to-cart-btn" data-name="Nike Air ZoomX" data-price="249.99"><i class="fas fa-cart-plus"></i> Add to Cart</button>
+                        <button class="btn btn-outline buy-now-btn" onclick="window.location.href='booking.html'"><i class="fas fa-bolt"></i> Buy Now</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. Sports Equipment -->
         <section id="sports-equipment" class="section gallery-section">
             <div class="container">
-                <h2 class="section-title">Sports Equipment</h2>
+                <div class="gallery-section-header">
+                    <div class="icon-wrap"><i class="fas fa-dumbbell"></i></div>
+                    <div>
+                        <h2>Sports Equipment</h2>
+                        <p>Court-ready gear for every game.</p>
+                    </div>
+                    <a href="services.html#equipment" class="btn btn-outline shop-link"><i class="fas fa-store"></i> Shop Sports Equipment</a>
+                </div>
                 <div class="gallery-grid">
-                    <div class="gallery-item"><img
-                            src="https://i.pinimg.com/1200x/3c/e6/02/3ce6028fa08c42a7ed942220a7ed8509.jpg"
-                            alt="Basketball"></div>
-                    <div class="gallery-item"><img
+                    <div class="gallery-item" data-name="Elite Basketball" data-price="49.99"><img
+                            src="https://images.unsplash.com/photo-1546519638-68e109498ffc?q=80&w=1200&auto=format&fit=crop"
+                            alt="Elite Basketball"></div>
+                    <div class="gallery-item" data-name="Pro Match Football" data-price="59.99"><img
                             src="https://images.unsplash.com/photo-1579952363873-27f3bade9f55?q=80&w=600&auto=format&fit=crop"
-                            alt="Football"></div>
-                    <div class="gallery-item wide"><img
+                            alt="Pro Match Football"></div>
+                    <div class="gallery-item wide" data-name="Pro Court Tennis Set" data-price="89.99"><img
                             src="https://images.unsplash.com/photo-1541534741688-6078c6bfb5c5?q=80&w=800&auto=format&fit=crop"
-                            alt="Tennis"></div>
+                            alt="Pro Court Tennis Set"></div>
                 </div>
             </div>
         </section>
 
-        <!-- 4. Outdoor Gear -->
+        <!-- 6. Outdoor Gear -->
         <section id="outdoor-gear" class="section gallery-section bg-alt">
             <div class="container">
-                <h2 class="section-title">Outdoor Gear</h2>
+                <div class="gallery-section-header">
+                    <div class="icon-wrap"><i class="fas fa-campground"></i></div>
+                    <div>
+                        <h2>Outdoor Gear</h2>
+                        <p>Adventure starts with the right kit.</p>
+                    </div>
+                    <a href="services.html#outdoor" class="btn btn-outline shop-link"><i class="fas fa-store"></i> Shop Outdoor Gear</a>
+                </div>
                 <div class="gallery-grid">
-                    <div class="gallery-item wide"><img
-                            src="https://i.pinimg.com/736x/45/35/b5/4535b5757cbe8b783701f7063c78b899.jpg"
-                            alt="Tent"></div>
-                    <div class="gallery-item"><img
-                            src="https://i.pinimg.com/1200x/63/aa/a0/63aaa0387451a4bb6fda533a6854d9c4.jpg"
-                            alt="Surfing"></div>
-                    <div class="gallery-item"><img
+                    <div class="gallery-item wide" data-name="Expedition Camping Tent" data-price="299.99"><img
+                            src="https://images.unsplash.com/photo-1478131143081-80f7f84ca84d?q=80&w=1200&auto=format&fit=crop"
+                            alt="Expedition Camping Tent"></div>
+                    <div class="gallery-item" data-name="Pro Wave Surfboard" data-price="599.00"><img
+                            src="https://images.unsplash.com/photo-1502680390469-be75c86b636f?q=80&w=900&auto=format&fit=crop"
+                            alt="Pro Wave Surfboard"></div>
+                    <div class="gallery-item" data-name="Winter Snowboard" data-price="449.99"><img
                             src="https://i.pinimg.com/736x/97/36/e8/9736e859eaef491951298348f3608ae2.jpg"
-                            alt="Snowboard"></div>
+                            alt="Winter Snowboard"></div>
                 </div>
             </div>
         </section>
 
-        <!-- 5. Cycling -->
+        <!-- 7. Cycling -->
         <section id="cycling" class="section gallery-section">
             <div class="container">
-                <h2 class="section-title">Cycling</h2>
+                <div class="gallery-section-header">
+                    <div class="icon-wrap"><i class="fas fa-bicycle"></i></div>
+                    <div>
+                        <h2>Cycling</h2>
+                        <p>From city rides to mountain trails.</p>
+                    </div>
+                    <a href="services.html#equipment" class="btn btn-outline shop-link"><i class="fas fa-store"></i> Shop Cycling Gear</a>
+                </div>
                 <div class="gallery-grid">
-                    <div class="gallery-item"><img
-                            src="https://i.pinimg.com/736x/42/c7/22/42c7222800b89cd8ffc7caeaa4055ead.jpg"
-                            alt="Bicycle"></div>
-                    <div class="gallery-item wide"><img
+                    <div class="gallery-item" data-name="Trail Pro Mountain Bike" data-price="899.00"><img
+                            src="https://images.unsplash.com/photo-1485965120184-e220f721d03e?q=80&w=900&auto=format&fit=crop"
+                            alt="Trail Pro Mountain Bike"></div>
+                    <div class="gallery-item wide" data-name="Aero Cycling Helmet" data-price="89.99"><img
                             src="https://i.pinimg.com/736x/6e/6b/97/6e6b9725912c161c7e64e53dcd492f84.jpg"
-                            alt="Helmet"></div>
-                    <div class="gallery-item"><img
+                            alt="Aero Cycling Helmet"></div>
+                    <div class="gallery-item" data-name="Cycling Essentials Kit" data-price="119.99"><img
                             src="https://i.pinimg.com/736x/52/e6/83/52e68368252c5e9c4213b61cb264f382.jpg"
-                            alt="Gear"></div>
+                            alt="Cycling Essentials Kit"></div>
                 </div>
             </div>
         </section>
 
-        <!-- 6. Fitness -->
+        <!-- 8. Fitness -->
         <section id="fitness" class="section gallery-section bg-alt">
             <div class="container">
-                <h2 class="section-title">Fitness</h2>
+                <div class="gallery-section-header">
+                    <div class="icon-wrap"><i class="fas fa-heartbeat"></i></div>
+                    <div>
+                        <h2>Fitness</h2>
+                        <p>Train harder with pro-grade fitness equipment.</p>
+                    </div>
+                    <a href="services.html#equipment" class="btn btn-outline shop-link"><i class="fas fa-store"></i> Shop Fitness Gear</a>
+                </div>
                 <div class="gallery-grid">
-                    <div class="gallery-item wide"><img
-                            src="https://i.pinimg.com/736x/41/70/8f/41708f2baffdd8210d4fd7a10eaa9a04.jpg"
-                            alt="Gym"></div>
-                    <div class="gallery-item"><img
+                    <div class="gallery-item wide" data-name="Home Gym Starter Package" data-price="349.99"><img
+                            src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?q=80&w=1200&auto=format&fit=crop"
+                            alt="Home Gym Starter Package"></div>
+                    <div class="gallery-item" data-name="Adjustable Dumbbell Set" data-price="149.99"><img
                             src="https://images.unsplash.com/photo-1517836357463-d25dfeac3438?q=80&w=600&auto=format&fit=crop"
-                            alt="Weights"></div>
-                    <div class="gallery-item"><img
+                            alt="Adjustable Dumbbell Set"></div>
+                    <div class="gallery-item" data-name="TreadPro Runner" data-price="1299.00"><img
                             src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?q=80&w=600&auto=format&fit=crop"
-                            alt="Treadmill"></div>
+                            alt="TreadPro Runner"></div>
                 </div>
             </div>
         </section>
 
-        <!-- 7. Customer Gallery -->
+        <!-- 9. Brand Promise -->
+        <section class="brand-band">
+            <div class="container brand-features">
+                <div class="brand-feature"><i class="fas fa-truck-fast"></i><div><h4>Fast Free Shipping</h4><p>On all orders over $75, delivered in 2–4 days.</p></div></div>
+                <div class="brand-feature"><i class="fas fa-shield-halved"></i><div><h4>2-Year Warranty</h4><p>Every product is covered by our gear warranty.</p></div></div>
+                <div class="brand-feature"><i class="fas fa-medal"></i><div><h4>Pro-Grade Quality</h4><p>Trusted by athletes and teams worldwide.</p></div></div>
+                <div class="brand-feature"><i class="fas fa-rotate-left"></i><div><h4>Easy Returns</h4><p>30-day hassle-free returns on all items.</p></div></div>
+            </div>
+        </section>
+
+        <!-- 10. Customer Gallery -->
         <section id="customer-gallery" class="section gallery-section">
             <div class="container">
-                <h2 class="section-title">Customer Gallery</h2>
+                <div class="gallery-section-header">
+                    <div class="icon-wrap"><i class="fas fa-users"></i></div>
+                    <div>
+                        <h2>Customer Gallery</h2>
+                        <p>Real athletes, real gear — captured by our community.</p>
+                    </div>
+                    <a href="contact.html" class="btn btn-outline shop-link"><i class="fas fa-camera"></i> Share Your Experience</a>
+                </div>
                 <div class="gallery-masonry">
                     <div class="masonry-pic"><img
                             src="https://images.unsplash.com/photo-1517649763962-0c623066013b?q=80&w=600&auto=format&fit=crop"
@@ -162,11 +292,23 @@
                 </div>
             </div>
         </section>
+
+        <!-- 11. Final CTA -->
+        <section class="gallery-cta">
+            <div class="container">
+                <h2>Ready to Gear Up?</h2>
+                <p>Explore the full Sportivo collection and find the perfect equipment for your next challenge.</p>
+                <div class="gallery-cta-actions">
+                    <a href="services.html" class="btn btn-primary btn-large"><i class="fas fa-store"></i> Shop the Collection</a>
+                    <a href="contact.html" class="btn btn-outline btn-large"><i class="fas fa-calendar-check"></i> Book a Service</a>
+                </div>
+            </div>
+        </section>
     </main>
     <footer class="professional-footer">
         <div class="container footer-grid">
             <div class="footer-col brand-col">
-                <a href="../index.html" class="footer-logo">Sportivo</a>
+                <a href="../index.html" class="footer-logo"><img src="../favicon.svg" alt="Sportivo Logo" class="footer-logo-img"> Sportivo</a>
                 <p>Empowering athletes with premium gear, innovative technology, and uncompromising quality for every
                     challenge.</p>
                 <div class="footer-socials">
@@ -238,13 +380,28 @@
             });
         });
 
-        // Auto-generate hover text overlays from image alt attributes
+        // Auto-generate hover overlays from image alt attributes (name, price & add-to-cart for products)
         document.querySelectorAll('.gallery-item, .masonry-pic').forEach(item => {
             const img = item.querySelector('img');
             if (img && img.alt) {
                 const overlay = document.createElement('div');
                 overlay.className = 'hover-text-overlay';
-                overlay.innerHTML = `<h3>${img.alt}</h3>`;
+                const content = document.createElement('div');
+                content.className = 'overlay-content';
+                content.innerHTML = `<h3>${img.alt}</h3>`;
+                if (item.dataset.name && item.dataset.price) {
+                    const priceEl = document.createElement('p');
+                    priceEl.className = 'overlay-price';
+                    priceEl.textContent = '$' + parseFloat(item.dataset.price).toFixed(2);
+                    content.appendChild(priceEl);
+                    const addBtn = document.createElement('button');
+                    addBtn.className = 'btn btn-primary overlay-add-btn add-to-cart-btn';
+                    addBtn.dataset.name = item.dataset.name;
+                    addBtn.dataset.price = item.dataset.price;
+                    addBtn.innerHTML = '<i class="fas fa-cart-plus"></i> Add to Cart';
+                    content.appendChild(addBtn);
+                }
+                overlay.appendChild(content);
                 item.appendChild(overlay);
             }
         });

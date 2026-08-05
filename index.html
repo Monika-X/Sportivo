@@ -11,25 +11,33 @@
 <body>
     <nav class="navbar">
         <a href="index.html" class="logo-container">
-            <span class="logo">Sportivo</span>
-            <span class="logo-tagline">Elite Sports Gear</span>
+            <img src="favicon.svg" alt="Sportivo Logo" class="logo-img">
+            <span class="logo-text">
+                <span class="logo">Sportivo</span>
+                <span class="logo-tagline">Elite Sports Gear</span>
+            </span>
         </a>
         <ul class="nav-links" id="nav-links">
             <li><a href="index.html">Home</a></li>
-                    <li><a href="pages/home2.html">Home 2</a></li>
             <li><a href="pages/home2.html">Home 2</a></li>
             <li><a href="pages/about.html">About</a></li>
-            <li><a href="pages/services.html">Services</a></li>
+            <li><a href="pages/services.html">Shop</a></li>
             <li><a href="pages/gallery.html">Gallery</a></li>
             <li><a href="pages/blog.html">Blog</a></li>
             <li><a href="pages/contact.html">Contact</a></li>
         </ul>
         <div class="nav-icons">
-            <div class="user-dropdown">
-                <button id="user-toggle" aria-label="User Profile" title="Account"><i class="fas fa-user"></i></button>
-                <div class="user-dropdown-menu" id="user-dropdown-menu">
-                    <a href="pages/login.html"><i class="fas fa-sign-in-alt"></i> Login</a>
-                    <a href="pages/signup.html"><i class="fas fa-user-plus"></i> Sign Up</a>
+            <a href="pages/contact.html" class="btn btn-primary nav-book-cta"><i class="fas fa-calendar-check"></i> Book a Service</a>
+            <div class="cart-dropdown">
+                <button id="cart-toggle" aria-label="Shopping Cart" title="Cart"><i class="fas fa-shopping-cart"></i><span class="cart-badge" id="cart-count">0</span></button>
+                <div class="cart-dropdown-menu" id="cart-dropdown-menu">
+                    <p class="cart-empty" id="cart-empty"><i class="fas fa-shopping-cart"></i> Your cart is empty</p>
+                    <div class="cart-items" id="cart-items"></div>
+                    <div class="cart-footer" id="cart-footer" style="display: none;">
+                        <div class="cart-total"><span>Total</span><strong id="cart-total-price">$0.00</strong></div>
+                        <a href="pages/booking.html" class="btn btn-primary cart-checkout"><i class="fas fa-bolt"></i> Buy Now</a>
+                    </div>
+                    <a href="pages/booking.html" class="btn btn-primary cart-cta">Shop Collection</a>
                 </div>
             </div>
             <button id="theme-toggle" aria-label="Toggle Theme" title="Toggle Theme"><i class="fas fa-moon"></i></button>
@@ -60,6 +68,10 @@
                 <div class="preview-info">
                     <h3>Nike Air ZoomX</h3>
                     <p class="price">$249.99</p>
+                </div>
+                <div class="hero-preview-actions">
+                    <button class="wishlist-btn" aria-label="Add to Wishlist" title="Add to Wishlist"><i class="far fa-heart"></i></button>
+                    <button class="btn btn-primary add-to-cart-btn preview-cart-btn" data-name="Nike Air ZoomX" data-price="249.99"><i class="fas fa-cart-plus"></i> Add to Cart</button>
                 </div>
             </div>
         </section>
@@ -110,6 +122,7 @@
                     <div class="product-card">
                         <div class="product-image">
                             <img src="https://i.pinimg.com/736x/af/c5/27/afc527aa1420c3b0e3957b2b8bf526fc.jpg" alt="Puma Cleats">
+                            <button class="wishlist-btn" aria-label="Add to Wishlist" title="Add to Wishlist"><i class="far fa-heart"></i></button>
                             <button class="quick-view-btn">Quick View</button>
                         </div>
                         <div class="product-details">
@@ -119,12 +132,17 @@
                             </div>
                             <h3>Puma Future Z Cleats</h3>
                             <p class="price">$189.99</p>
+                            <div class="product-actions">
+                                <button class="btn btn-primary add-to-cart-btn" data-name="Puma Future Z Cleats" data-price="189.99"><i class="fas fa-cart-plus"></i> Add to Cart</button>
+                                <button class="btn btn-outline buy-now-btn" onclick="window.location.href='pages/booking.html'"><i class="fas fa-bolt"></i> Buy Now</button>
+                            </div>
                         </div>
                     </div>
                     <!-- Product 2 -->
                     <div class="product-card">
                         <div class="product-image">
                             <img src="https://i.pinimg.com/736x/6c/d0/ba/6cd0ba7a85d0f0a4bec5bd6c7c50905c.jpg" alt="Surfboard">
+                            <button class="wishlist-btn" aria-label="Add to Wishlist" title="Add to Wishlist"><i class="far fa-heart"></i></button>
                             <button class="quick-view-btn">Quick View</button>
                         </div>
                         <div class="product-details">
@@ -134,12 +152,17 @@
                             </div>
                             <h3>Pro Wave Surfboard</h3>
                             <p class="price">$599.00</p>
+                            <div class="product-actions">
+                                <button class="btn btn-primary add-to-cart-btn" data-name="Pro Wave Surfboard" data-price="599.00"><i class="fas fa-cart-plus"></i> Add to Cart</button>
+                                <button class="btn btn-outline buy-now-btn" onclick="window.location.href='pages/booking.html'"><i class="fas fa-bolt"></i> Buy Now</button>
+                            </div>
                         </div>
                     </div>
                     <!-- Product 3 -->
                     <div class="product-card">
                         <div class="product-image">
                             <img src="https://i.pinimg.com/736x/a8/d7/57/a8d757894d5f4b7c043fd8f72d4d69aa.jpg" alt="Yoga Mat">
+                            <button class="wishlist-btn" aria-label="Add to Wishlist" title="Add to Wishlist"><i class="far fa-heart"></i></button>
                             <button class="quick-view-btn">Quick View</button>
                         </div>
                         <div class="product-details">
@@ -149,12 +172,17 @@
                             </div>
                             <h3>GripPro Yoga Mat</h3>
                             <p class="price">$45.00</p>
+                            <div class="product-actions">
+                                <button class="btn btn-primary add-to-cart-btn" data-name="GripPro Yoga Mat" data-price="45.00"><i class="fas fa-cart-plus"></i> Add to Cart</button>
+                                <button class="btn btn-outline buy-now-btn" onclick="window.location.href='pages/booking.html'"><i class="fas fa-bolt"></i> Buy Now</button>
+                            </div>
                         </div>
                     </div>
                     <!-- Product 4 -->
                     <div class="product-card">
                         <div class="product-image">
                             <img src="https://i.pinimg.com/736x/0c/8a/49/0c8a499e71dbfedd987e61c09719ba1c.jpg" alt="Tennis Racket">
+                            <button class="wishlist-btn" aria-label="Add to Wishlist" title="Add to Wishlist"><i class="far fa-heart"></i></button>
                             <button class="quick-view-btn">Quick View</button>
                         </div>
                         <div class="product-details">
@@ -164,6 +192,10 @@
                             </div>
                             <h3>Wilson Pro Staff V13</h3>
                             <p class="price">$229.99</p>
+                            <div class="product-actions">
+                                <button class="btn btn-primary add-to-cart-btn" data-name="Wilson Pro Staff V13" data-price="229.99"><i class="fas fa-cart-plus"></i> Add to Cart</button>
+                                <button class="btn btn-outline buy-now-btn" onclick="window.location.href='pages/booking.html'"><i class="fas fa-bolt"></i> Buy Now</button>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -277,7 +309,10 @@
                         <div id="qv-rating" class="rating"></div>
                         <p id="qv-price" class="price">$0.00</p>
                         <p class="qv-desc">Premium quality sports equipment designed to elevate your performance. Crafted with precision for durability and maximum comfort.</p>
-                        <button class="btn btn-primary" onclick="window.location.href='pages/booking.html'">Add to Cart</button>
+                        <div class="modal-actions">
+                            <button class="btn btn-primary add-to-cart-btn" id="qv-add-to-cart"><i class="fas fa-cart-plus"></i> Add to Cart</button>
+                            <button class="btn btn-outline" onclick="window.location.href='pages/booking.html'"><i class="fas fa-bolt"></i> Buy Now</button>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -287,7 +322,7 @@
     <footer class="professional-footer">
         <div class="container footer-grid">
             <div class="footer-col brand-col">
-                <a href="index.html" class="footer-logo">Sportivo</a>
+                <a href="index.html" class="footer-logo"><img src="favicon.svg" alt="Sportivo Logo" class="footer-logo-img"> Sportivo</a>
                 <p>Empowering athletes with premium gear, innovative technology, and uncompromising quality for every challenge.</p>
                 <div class="footer-socials">
                     <a href="https://facebook.com/sportivo" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook-f"></i></a>
