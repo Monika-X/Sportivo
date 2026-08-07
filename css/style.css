@@ -1104,7 +1104,7 @@ a {
   }
 
   .nav-icons {
-    gap: 0.8rem;
+    gap: 1.2rem;
   }
 }
 
@@ -1382,7 +1382,6 @@ a {
   /* Navbar — keep comfortable height */
   .navbar { padding: 1rem 1rem; }
   .logo { font-size: 1.5rem; }
-  .nav-icons { gap: 0.6rem; }
   .nav-icons button { font-size: 1rem; }
   #rtl-toggle { font-size: 0.8rem !important; }
   .cart-badge { top: -4px; right: -4px; min-width: 14px; height: 14px; font-size: 0.6rem; }
@@ -1399,7 +1398,6 @@ a {
   /* 320px navbar — still full height */
   .navbar { padding: 1rem 0.75rem; }
   .logo { font-size: 1.3rem; }
-  .nav-icons { gap: 0.55rem; }
   .nav-icons button { font-size: 0.95rem; }
   #rtl-toggle { font-size: 0.75rem !important; padding: 0; }
   .cart-badge { top: -4px; right: -4px; }
